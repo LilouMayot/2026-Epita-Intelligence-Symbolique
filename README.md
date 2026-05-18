@@ -137,7 +137,7 @@ Les notebooks suivants sont disponibles dans le depot CoursIA ([jsboige/CoursIA]
 | [A3](#a3--theoreme-darrow-par-preuve-automatisee-satz3lean) | Theoreme d'Arrow par preuve automatisee (SAT/Z3/Lean) | 5/5 |
 | [A4](#a4--bibliotheque-de-preuves-mathlib--extensions) | Bibliotheque de preuves Mathlib — extensions | 3/5 |
 | [A5](#a5--mariages-stables-gale-shapley--preuve-formelle-et-extensions-en-lean-4) | Mariages stables Gale-Shapley : preuve formelle et extensions en Lean 4 | 3/5 |
-| [A6](#a6--preuve-de-lexistence-de-nash-par-le-theoreme-de-point-fixe-de-kakutani-en-lean-4) | Preuve de l'existence de Nash par le theoreme de point fixe de Kakutani en Lean 4 | 5/5 |
+| [A6](#a6--preuve-de-lexistence-de-nash-par-point-fixe-en-lean-4) | Preuve de l'existence de Nash par point fixe en Lean 4 | 5/5 |
 
 ### Categorie B : Logique Formelle, SAT et Demonstration Automatique
 
@@ -506,16 +506,16 @@ Le theoreme de Gale-Shapley (1962) garantit l'existence d'un mariage stable pour
 
 ---
 
-#### A6 — Preuve de l'existence de Nash par le theoreme de point fixe de Kakutani en Lean 4
+#### A6 — Preuve de l'existence de Nash par point fixe en Lean 4
 
-Le theoreme d'existence de Nash (1950) affirme que tout jeu fini a N joueurs admet au moins un equilibre en strategies mixtes. La preuve classique invoque le theoreme du point fixe de Kakutani (1941) : l'application de meilleure reponse d'un jeu definit une correspondance convex-valued a points fixes sur le produit des simplexes de strategies mixtes. Ce sujet propose de formaliser cette chaine de raisonnement en Lean 4 : (1) definir les jeux sous forme normale et les strategies mixtes comme distributions sur un type fini ; (2) construire la correspondance de meilleure reponse et prouver sa convexite et sa fermeture ; (3) enoncer et prouver le theoreme de Kakutani (ou l'admettre comme axiome si Mathlib ne le contient pas encore) ; (4) combiner pour obtenir le theoreme d'existence de Nash. C'est un sujet de recherche en mathematiques formelles : la formalisation complete n'existe pas dans Mathlib a ce jour, et les etudiants devront naviguer entre analyse convexe, topologie des simplexes et theorie des jeux. Le notebook CoursIA GT-4b couvre l'approche SMT comme alternative plus accessible.
+Le theoreme d'existence de Nash (1950) affirme que tout jeu fini a N joueurs admet au moins un equilibre en strategies mixtes. Deux routes de preuve sont formalisees en Lean 4 dans la litterature, mais **aucune n'est dans Mathlib** a ce jour : (1) la voie Brouwer via le lemme de Scarf (`math-xmum/Brouwer` — pipeline complet Scarf→Brouwer→produit→Nash, 0 sorry) ; (2) la voie Kakutani via correspondance de meilleure reponse (`harfe/fixed-point-theorems-lean4` — Kakutani complet, 0 sorry, mais non encore connecte a Nash). Ce sujet propose soit de reproduire et comprendre l'une de ces formalisations, soit de combler le gap ouvert : connecter le Kakutani de `harfe` avec les definitions de jeux de `MixedMatched/formalizing-game-theory` pour obtenir Nash par la voie "manuel d'economie" (correspondance de meilleure reponse → convexite/fermeture → point fixe de Kakutani → existence Nash). C'est un sujet de recherche en mathematiques formelles.
 
 ### Objectifs
-1. Definir les jeux sous forme normale en Lean 4 (joueurs, strategies pures, fonctions d'utilite) et les strategies mixtes comme fonctions de probabilite sur un type fini
-2. Construire la correspondance de meilleure reponse et prouver que son image est convexe et fermee pour chaque joueur
-3. Enoncer le theoreme de point fixe de Kakutani et determiner sa disponibilite dans Mathlib (ou formaliser un cas special suffisant)
-4. Combiner les composants pour prouver le theoreme d'existence de Nash
-5. Comparer avec l'approche SMT (GT-4c Python) et l'encodage Lemke-Howson (GT-4 notebook) comme alternatives calculatoires
+1. Etudier et comprendre la formalisation complete `math-xmum/Brouwer` (Scarf→Brouwer→produit→Nash) et la reproduire pas a pas
+2. Etudier le theoreme de Kakutani dans `harfe/fixed-point-theorems-lean4` (Brouwer + partition unite + Caratheodory → Kakutani)
+3. Definir les jeux sous forme normale, strategies mixtes et correspondance de meilleure reponse en s'appuyant sur `MixedMatched/formalizing-game-theory`
+4. Prouver que la correspondance de meilleure reponse satisfait les hypotheses de Kakutani (convexite, fermeture, graphes fermes)
+5. Combiner pour obtenir le theoreme d'existence de Nash via Kakutani (contribution potentiellement originale si complet)
 
 ### Notebooks CoursIA pertinents
 
@@ -524,15 +524,15 @@ Le theoreme d'existence de Nash (1950) affirme que tout jeu fini a N joueurs adm
 | GT-4 Nash Equilibrium | [GameTheory/GameTheory-4-NashEquilibrium.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash, Lemke-Howson |
 | GT-4b Lean Nash | [GameTheory/GameTheory-4b-Lean-NashExistence.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4b-Lean-NashExistence.ipynb) | Preuve d'existence en Lean 4 |
 | GT-4c Nash Python | [GameTheory/GameTheory-4c-NashExistence-Python.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4c-NashExistence-Python.ipynb) | Implementation Python |
-| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-4-Mathlib.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-4-Mathlib.ipynb) | Structures topologiques Mathlib |
-| Lean-8 Agentic Proving | [SymbolicAI/Lean/Lean-8-AgenticProving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-AgenticProving.ipynb) | Preuve automatisee par agent |
+| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-4-Mathlib.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-4-Mathlib.ipynb) | Structures Mathlib (convexite, topologie) |
 
 ### References externes
 - Nash, J.F. (1950). "Equilibrium Points in N-Person Games." *PNAS*, 36(1), 48-49. [PNAS](https://www.pnas.org/doi/10.1073/pnas.36.1.48)
 - Kakutani, S. (1941). "A Generalization of Brouwer's Fixed Point Theorem." *Duke Mathematical Journal*, 8(3), 457-459. [Duke](https://doi.org/10.1215/S0012-7094-41-00838-4)
+- `math-xmum/Brouwer` — Nash existence via Scarf→Brouwer en Lean 4 (0 sorry). [GitHub](https://github.com/math-xmum/Brouwer)
+- `harfe/fixed-point-theorems-lean4` — Kakutani fixed-point theorem en Lean 4 (0 sorry). [GitHub](https://github.com/harfe/fixed-point-theorems-lean4)
+- `MixedMatched/formalizing-game-theory` — Definitions N-joueurs, strategies mixtes en Lean 4. [GitHub](https://github.com/MixedMatched/formalizing-game-theory)
 - Geanakoplos, J. (2003). "Nash and Walras Equilibrium via Brouwer." *Economic Theory*, 21, 585-603. [Springer](https://doi.org/10.1007/s001990000076)
-- theprover-community, Mathlib4. [GitHub](https://github.com/leanprover-community/mathlib4/)
-- Tropp, J.A. (2004). "An Introduction to Distributed Algorithms." *Cambridge* — pour les correspondances convexes.
 
 ### Difficulte : 5/5
 
