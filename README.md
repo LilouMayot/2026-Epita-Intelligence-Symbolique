@@ -1057,6 +1057,8 @@ Les encheres combinatoires permettent aux participants de soumettre des offres s
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | GT-16 Mechanism Design | [GameTheory/GameTheory-16-MechanismDesign.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16-MechanismDesign.ipynb) | VCG, encheres, mecanismes d'incitation |
+| SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes d'aggregation |
+| GT-15b Lean Cooperative | [GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb) | Preuve formelle Lean 4 des proprietes VCG |
 | GT-4 Normal Form | [GameTheory/GameTheory-4-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NormalForm.ipynb) | Jeux en forme normale, strategies dominantes |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation CP-SAT, probleme du sac a dos |
 
@@ -1121,6 +1123,9 @@ La theorie de la conception de mecanismes (mechanism design) vise a concevoir de
 | GT-16b Social Choice | [GameTheory/GameTheory-16b-SocialChoice.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16b-SocialChoice.ipynb) | Choix social, theoremes d'impossibilite |
 | GT-16d Arrow SAT | [GameTheory/GameTheory-16d-ArrowSAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16d-ArrowSAT.ipynb) | Encodage SAT du theoreme d'Arrow |
 | GT-16e Arrow Z3 | [GameTheory/GameTheory-16e-ArrowZ3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16e-ArrowZ3.ipynb) | Encodage SMT (Z3) |
+| Arrow SAT (SocialChoice) | [GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb) | Theoreme d'Arrow par SAT, encoding complet |
+| Arrow Lean (SocialChoice) | [GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb) | Preuve formelle Lean 4 d'Arrow |
+| SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes d'aggregation |
 
 ### References externes
 - Gibbard, A. (1973). "Manipulation of Voting Schemes: A General Result." *Econometrica*, 41(4), 587-601. [JSTOR](https://www.jstor.org/stable/1914083)
@@ -1145,6 +1150,8 @@ CFR is an iterative algorithm that minimizes regret at each information set in e
 | GT-13 Imperfect Info CFR | [GameTheory/GameTheory-13-ImperfectInfo-CFR.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-13-ImperfectInfo-CFR.ipynb) | Information imparfaite, CFR |
 | GT-7 Extensive Form | [GameTheory/GameTheory-7-ExtensiveForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-7-ExtensiveForm.ipynb) | Jeux sous forme extensive |
 | GT-5 Zero-Sum Minimax | [GameTheory/GameTheory-5-ZeroSumMinimax.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-5-ZeroSumMinimax.ipynb) | Zero-sum, minimax |
+| GT-4b Lean Nash Existence | [GameTheory/GameTheory-4b-Lean-NashExistence.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4b-Lean-NashExistence.ipynb) | Preuve formelle Lean 4 de l'existence de Nash |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logique epistemique, information sets comme mondes de Kripke |
 
 ### References externes
 - Zinkevich, M. et al. (2008). "Regret Minimization in Games with Incomplete Information." *NeurIPS 2007*. [NeurIPS](https://proceedings.neurips.cc/paper/2007/hash/08d98638c5f4bd8614a3ba2c223ab4a0-Abstract.html)
@@ -2992,6 +2999,7 @@ La logique epistemique formalise le raisonnement sur la connaissance et la croya
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logiques modales, modeles de Kripke |
+| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Preuve formelle de proprietes epistemiques en Lean 4 |
 | GT-11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique, croyances |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Resolution de contraintes |
 | QC-Py-08 Multi-Asset | [QuantConnect/Python/QC-Py-08-Multi-Asset-Strategies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-08-Multi-Asset-Strategies.ipynb) | Strategies multi-actifs, correlations |
@@ -3333,8 +3341,9 @@ La theorie de la capture reglementaire (Stigler, 1971 ; Laffont & Tirole, 1993) 
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks de Dung, semantiques |
 | Tweety-6 Structured Argumentation | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | Argumentation structuree, ASPIC+ |
 | Tweety-3 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques modales, epistemique |
+| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Preuve formelle de structures epistemiques |
 | GT-11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique |
-| GT-16 Mechanism Design | [GameTheory/GameTheory-16-MechanismDesign.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16-MechanismDesign.ipynb) | Incentives, revelation |
+| SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes informationnelles |
 | Tweety-8 Agent Dialogues | [SymbolicAI/Tweety/Tweety-8-Agent-Dialogues.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-8-Agent-Dialogues.ipynb) | Dialogues strategiques |
 
 ### References externes
