@@ -373,8 +373,8 @@ La preuve formelle d'algorithmes en Lean 4 consiste a specifier la correction fo
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Lean-1 Setup | [SymbolicAI/Lean/Lean-1-Setup.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-1-Setup.ipynb) | Installation, premieres preuves |
-| Lean-2 Dependent Types | [SymbolicAI/Lean/Lean-2-DependentTypes.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-2-DependentTypes.ipynb) | Types dependants, specifications |
-| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions.ipynb) | Theoremes, tactiques de base |
+| Lean-2 Dependent Types | [SymbolicAI/Lean/Lean-2-Dependent-Types.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-2-Dependent-Types.ipynb) | Types dependants, specifications |
+| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Theoremes, tactiques de base |
 | Lean-5 Tactics | [SymbolicAI/Lean/Lean-5-Tactics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-5-Tactics.ipynb) | Tactiques avancees (simp, omega) |
 | Conway Lean (Surreals) | [GameTheory/conway_lean/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GameTheory/conway_lean/) | Nombres surreels en Lean 4 |
 
@@ -404,9 +404,9 @@ L'integration des LLM dans les assistants de preuve est l'une des avances les pl
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Lean-7 LLM Integration | [SymbolicAI/Lean/Lean-7-LLMIntegration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLMIntegration.ipynb) | LLM + Lean, suggestions tactiques |
-| Lean-8 Agentic Proving | [SymbolicAI/Lean/Lean-8-AgenticProving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-AgenticProving.ipynb) | Agent autonome de preuve |
-| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb) | Orchestration multi-agents |
+| Lean-7 LLM Integration | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | LLM + Lean, suggestions tactiques |
+| Lean-8 Agentic Proving | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Agent autonome de preuve |
+| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb) | Orchestration multi-agents |
 | Lean-10 LeanDojo | [SymbolicAI/Lean/Lean-10-LeanDojo.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-10-LeanDojo.ipynb) | Interaction programmatique |
 
 ### References externes
@@ -467,10 +467,10 @@ Mathlib4 est la bibliotheque mathematique de Lean 4, contenant plus de 1.5 milli
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-4-Mathlib.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-4-Mathlib.ipynb) | Decouverte de Mathlib, structure |
+| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb) | Decouverte de Mathlib, structure |
 | Lean-5 Tactics | [SymbolicAI/Lean/Lean-5-Tactics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-5-Tactics.ipynb) | Tactiques avancees, automatisation |
-| Lean-6 Mathlib Avance | [SymbolicAI/Lean/Lean-6-MathlibAvance.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-6-MathlibAvance.ipynb) | Contributions, workflow PR |
-| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions.ipynb) | Preuves de proprietes |
+| Lean-6 Mathlib Avance | [SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb) | Contributions, workflow PR |
+| Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Preuves de proprietes |
 
 ### References externes
 - Mathlib Community. *Contributing to Mathlib*. [leanprover-community.github.io/contribute/](https://leanprover-community.github.io/contribute/index.html)
@@ -498,7 +498,7 @@ Le theoreme de Gale-Shapley (1962) garantit l'existence d'un mariage stable pour
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Stable Marriage Lean | [GameTheory/stable_marriage_lean/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GameTheory/stable_marriage_lean/) | Port Lean 4 de Gale-Shapley |
-| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-4-Mathlib.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-4-Mathlib.ipynb) | Structures Mathlib (finset, list) |
+| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb) | Structures Mathlib (finset, list) |
 | Lean-5 Tactics | [SymbolicAI/Lean/Lean-5-Tactics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-5-Tactics.ipynb) | Tactiques de preuve |
 | SocialChoice Arrow | [GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb) | Choix social, connexions mechanism design |
 
@@ -530,7 +530,7 @@ Le theoreme d'existence de Nash (1950) affirme que tout jeu fini a N joueurs adm
 | GT-4 Nash Equilibrium | [GameTheory/GameTheory-4-NashEquilibrium.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash, Lemke-Howson |
 | GT-4b Lean Nash | [GameTheory/GameTheory-4b-Lean-NashExistence.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4b-Lean-NashExistence.ipynb) | Preuve d'existence en Lean 4 |
 | GT-4c Nash Python | [GameTheory/GameTheory-4c-NashExistence-Python.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4c-NashExistence-Python.ipynb) | Implementation Python |
-| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-4-Mathlib.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-4-Mathlib.ipynb) | Structures Mathlib (convexite, topologie) |
+| Lean-4 Mathlib | [SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-6-Mathlib-Essentials.ipynb) | Structures Mathlib (convexite, topologie) |
 
 ### References externes
 - Nash, J.F. (1950). "Equilibrium Points in N-Person Games." *PNAS*, 36(1), 48-49. [PNAS](https://www.pnas.org/doi/10.1073/pnas.36.1.48)
@@ -561,7 +561,7 @@ La resolution automatique de theoremes par SAT consiste a encoder des problemes 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-SAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-SAT.ipynb) | Encodage SAT, PySAT, solveurs |
+| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Encodage SAT, PySAT, solveurs |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3 SMT, comparaison SAT vs SMT |
 | CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation, variables, contraintes |
 
@@ -592,7 +592,7 @@ La synthese de programmes par sketching est une approche ou le programmeur fourn
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3 en C#, theories SMT, modeles |
-| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-SAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-SAT.ipynb) | SAT/SMT, resolution |
+| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | SAT/SMT, resolution |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation, objective functions |
 
 ### References externes
@@ -621,7 +621,7 @@ Le model checking est une technique de verification formelle qui explore exhaust
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Search-10 Automates | [Search/Part1-Foundations/Search-10-Automata.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-10-Automata.ipynb) | Automates symboliques, etats |
+| Search-10 Automates | [Search/Part1-Foundations/Search-10-SymbolicAutomata.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-10-SymbolicAutomata.ipynb) | Automates symboliques, etats |
 | CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation par contraintes |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3, verification formelle |
 
@@ -653,7 +653,7 @@ Les puzzles logiques (Einstein/Zebra, Knights and Knaves, Nonograms/Picross, Sud
 |----------|--------|------------|
 | Sudoku multi-solveurs | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | 18 solveurs compares, Z3, SAT, CP |
 | App-11 Picross | [Search/Applications/CSP/App-11-Picross.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/CSP/App-11-Picross.ipynb) | Nonograms/Picross par contraintes |
-| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb) | AllDifferent, contraintes globales |
+| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-Advanced.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-Advanced.ipynb) | AllDifferent, contraintes globales |
 
 ### References externes
 - de Moura, L. & Bjorner, N. (2008). "Z3: An Efficient SMT Solver." *TACAS*. [Springer](https://link.springer.com/chapter/10.1007/978-3-540-78800-3_24)
@@ -681,7 +681,7 @@ La demonstration automatique en geometrie elementaire consiste a prouver des the
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3, theorie NRA, verification |
-| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-SAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-SAT.ipynb) | SMT, theories non-lineaires |
+| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | SMT, theories non-lineaires |
 
 ### References externes
 - Wu, W.-T. (1994). *Mechanical Theorem Proving in Geometries*. Springer. [springer.com](https://link.springer.com/book/10.1007/978-3-7091-6636-9)
@@ -708,9 +708,9 @@ La programmation par ensembles de reponses (Answer Set Programming, ASP) est un 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-6 ASP/Clingo | [SymbolicAI/Tweety/Tweety-6-StructuredArgumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-StructuredArgumentation.ipynb) | ASP avec Clingo, argumentation |
+| Tweety-6 ASP/Clingo | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | ASP avec Clingo, argumentation |
 | CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Comparaison CSP, modelisation |
-| Tweety-2 Basic Logics | [SymbolicAI/Tweety/Tweety-2-BasicLogics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-BasicLogics.ipynb) | Logiques classiques, raisonnement |
+| Tweety-2 Basic Logics | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Logiques classiques, raisonnement |
 
 ### References externes
 - Gelfond, M. & Lifschitz, V. (1988). "The Stable Model Semantics for Logic Programming." *ICLP/SLP*. [cs.utexas.edu](https://www.cs.utexas.edu/~vl/papers/stable.pdf)
@@ -738,9 +738,9 @@ Les formules booleennes quantifiees (QBF) etendent SAT en ajoutant des quantific
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-3 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-AdvancedLogics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-AdvancedLogics.ipynb) | QBF, logiques modales, model checking |
+| Tweety-3 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | QBF, logiques modales, model checking |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3, quantificateurs, theories |
-| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-SAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-SAT.ipynb) | SAT, comparaison avec QBF |
+| CSP-6 SAT/SMT | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | SAT, comparaison avec QBF |
 
 ### References externes
 - Peyrer, M. et al. (2025). "PyQBF: A Python Framework for Solving QBF." *ACM TOCL*. [dl.acm.org](https://dl.acm.org/doi/10.1145/3701776)
@@ -770,10 +770,10 @@ La verification formelle de smart contracts Solidity exploite le SMTChecker inte
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb) | Fuzzing Foundry, complementaire au model checking |
-| SC-14 Formal Verification | [SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb) | SMTChecker, invariants, contre-exemples |
-| SC-0 Solidity Basics | [SymbolicAI/SmartContracts/SC-0-Solidity-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-0-Solidity-Basics.ipynb) | Fondamentaux Solidity, prerequis |
-| CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fondamentaux.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fondamentaux.ipynb) | Contraintes et propagation, bases conceptuelles |
+| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb) | Fuzzing Foundry, complementaire au model checking |
+| SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | SMTChecker, invariants, contre-exemples |
+| SC-0 Solidity Basics | [SymbolicAI/SmartContracts/01-Solidity-Foundation/SC-3-Solidity-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/01-Solidity-Foundation/SC-3-Solidity-Basics.ipynb) | Fondamentaux Solidity, prerequis |
+| CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Contraintes et propagation, bases conceptuelles |
 
 ### References externes
 - Hajdu, A. & Jovanovic, D. (2020). "SMT-Friendly Formalization of the Solidity Memory Model." *ESOP 2020*, LNCS 12075. [Springer](https://link.springer.com/chapter/10.1007/978-3-030-44914-8_9)
@@ -801,10 +801,10 @@ Le fuzzing guide par contraintes (concolic fuzzing) combine l'execution symboliq
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb) | Fuzzing Foundry/Echidna, point de depart |
-| SC-14 Formal Verification | [SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb) | Verification formelle, complementaire |
-| CSP-6 Hybridation | [Search/Part2-CSP/CSP-6-Hybridation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridation.ipynb) | Hybridation CP+SAT, strategies de recherche |
-| Planners-3 State Space | [SymbolicAI/Planners/Planners-3-StateSpace.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-3-StateSpace.ipynb) | Exploration d'espaces d'etats, concepts transversaux |
+| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb) | Fuzzing Foundry/Echidna, point de depart |
+| SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Verification formelle, complementaire |
+| CSP-6 Hybridation | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Hybridation CP+SAT, strategies de recherche |
+| Planners-3 State Space | [SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb) | Exploration d'espaces d'etats, concepts transversaux |
 
 ### References externes
 - Stephens, N. et al. (2016). "Driller: Augmenting Fuzzing Through Selective Symbolic Execution." *NDSS 2016*. [NDSS Symposium](https://www.ndss-symposium.org/ndss2016/ndss-2016-programme/augmenting-fuzzing-through-selective-symbolic-execution/)
@@ -832,10 +832,10 @@ L'analyse statique par interpretation abstraite est une technique formelle qui a
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-13-Fuzz.ipynb) | Techniques dynamiques complementaires |
-| SC-14 Formal Verification | [SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb) | Model checking, complementaire a l'interpretation abstraite |
-| Lean-2 Dependent Types | [SymbolicAI/Lean/Lean-2-DependentTypes.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-2-DependentTypes.ipynb) | Raisonnement formel sur les types, bases conceptuelles |
-| CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fondamentaux.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fondamentaux.ipynb) | Domaines, propagation de contraintes, points fixes |
+| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb) | Techniques dynamiques complementaires |
+| SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Model checking, complementaire a l'interpretation abstraite |
+| Lean-2 Dependent Types | [SymbolicAI/Lean/Lean-2-Dependent-Types.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-2-Dependent-Types.ipynb) | Raisonnement formel sur les types, bases conceptuelles |
+| CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Domaines, propagation de contraintes, points fixes |
 
 ### References externes
 - Cousot, P. & Cousot, R. (1977). "Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs." *POPL 1977*. [ACM](https://dl.acm.org/doi/10.1145/512950.512973)
@@ -863,10 +863,10 @@ Les preuves Zero-Knowledge (zk-SNARKs) permettent a un prover de convaincre un v
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-15 Zero-Knowledge Proofs | [SymbolicAI/SmartContracts/SC-15-ZKP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-15-ZKP.ipynb) | ZKP, Circom, SnarkJS, circuits arithmetiques |
-| SC-16 Homomorphic Encryption | [SymbolicAI/SmartContracts/SC-16-Homomorphic-Encryption.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-16-Homomorphic-Encryption.ipynb) | Chiffrement homomorphe, calcul sur donnees chiffrees |
-| SC-14 Formal Verification | [SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb) | Verification de circuits, complementaire |
-| SC-0 Solidity Basics | [SymbolicAI/SmartContracts/SC-0-Solidity-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-0-Solidity-Basics.ipynb) | Prerequis Solidity pour la verification on-chain |
+| SC-15 Zero-Knowledge Proofs | [SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb) | ZKP, Circom, SnarkJS, circuits arithmetiques |
+| SC-16 Homomorphic Encryption | [SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-16-Homomorphic-Encryption.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-16-Homomorphic-Encryption.ipynb) | Chiffrement homomorphe, calcul sur donnees chiffrees |
+| SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Verification de circuits, complementaire |
+| SC-0 Solidity Basics | [SymbolicAI/SmartContracts/01-Solidity-Foundation/SC-3-Solidity-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/01-Solidity-Foundation/SC-3-Solidity-Basics.ipynb) | Prerequis Solidity pour la verification on-chain |
 
 ### References externes
 - Ben-Sasson, E. et al. (2019). "Scalable Zero Knowledge with No Trusted Setup." *CRYPTO 2019*. [ePrint](https://eprint.iacr.org/2019/099)
@@ -899,10 +899,10 @@ La planification robotique avec PDDL consiste a modeliser un domaine de planific
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Planners-1 Introduction | [SymbolicAI/Planners/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-Introduction.ipynb) | Fondamentaux PDDL |
-| Planners-3 State-Space Search | [SymbolicAI/Planners/Planners-3-StateSpaceSearch.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-3-StateSpaceSearch.ipynb) | Heuristiques, Fast Downward |
-| Planners-4 Plan Execution | [SymbolicAI/Planners/Planners-4-PlanExecution.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-4-PlanExecution.ipynb) | Execution et monitoring |
-| Planners-5 Replanning | [SymbolicAI/Planners/Planners-5-Replanning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-5-Replanning.ipynb) | Re-planification en ligne |
+| Planners-1 Introduction | [SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb) | Fondamentaux PDDL |
+| Planners-3 State-Space Search | [SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb) | Heuristiques, Fast Downward |
+| Planners-4 Plan Execution | [SymbolicAI/Planners/02-Classical/Planners-4-Fast-Downward.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/02-Classical/Planners-4-Fast-Downward.ipynb) | Execution et monitoring |
+| Planners-5 Replanning | [SymbolicAI/Planners/02-Classical/Planners-5-Heuristics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/02-Classical/Planners-5-Heuristics.ipynb) | Re-planification en ligne |
 
 ### References externes
 - Helmert, M. (2006). "The Fast Downward Planning System." *Journal of Artificial Intelligence Research*, 26, 191-246. [JAIR](https://jair.org/index.php/jair/article/view/10457)
@@ -930,9 +930,9 @@ La planification HTN (Hierarchical Task Network) decompose recursivement une tac
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Planners-9 HTN | [SymbolicAI/Planners/Planners-9-HTN.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-9-HTN.ipynb) | Planification HTN |
-| Planners-1 Introduction | [SymbolicAI/Planners/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-Introduction.ipynb) | Fondamentaux planification |
-| Planners-6 GOAP | [SymbolicAI/Planners/Planners-6-GOAP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-6-GOAP.ipynb) | Goal-Oriented Action Planning |
+| Planners-9 HTN | [SymbolicAI/Planners/03-Advanced/Planners-9-HTN.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/03-Advanced/Planners-9-HTN.ipynb) | Planification HTN |
+| Planners-1 Introduction | [SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb) | Fondamentaux planification |
+| Planners-6 GOAP | [SymbolicAI/Planners/02-Classical/Planners-6-Domains.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/02-Classical/Planners-6-Domains.ipynb) | Goal-Oriented Action Planning |
 
 ### References externes
 - Erol, K., Hendler, J., & Nau, D. (1994). "Complexity Results for HTN Planning." *Annals of Mathematics and Artificial Intelligence*, 18(1), 69-93. [Springer](https://doi.org/10.1007/BF01531470)
@@ -959,7 +959,7 @@ L'ordonnancement multi-agent par CSP distribue (DisCSP) modelise un probleme ou 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-9 Distributed CSP | [Search/Part2-CSP/CSP-9-Distributed-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-9-Distributed-CSP.ipynb) | DisCSP, ABT, AWC |
+| CSP-9 Distributed CSP | [Search/Part2-CSP/CSP-9-Distributed.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-9-Distributed.ipynb) | DisCSP, ABT, AWC |
 | CSP-4 Scheduling | [Search/Part2-CSP/CSP-4-Scheduling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-4-Scheduling.ipynb) | Ordonnancement, IntervalVar |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation CSP |
 
@@ -988,10 +988,10 @@ La planification temporelle pour systemes cyber-physiques (CPS) etend la planifi
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Planners-8 Temporal Planning | [SymbolicAI/Planners/Planners-8-TemporalPlanning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-8-TemporalPlanning.ipynb) | PDDL 2.1, planification temporelle |
-| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-Temporal-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-Temporal-CSP.ipynb) | STP, consistance temporelle |
+| Planners-8 Temporal Planning | [SymbolicAI/Planners/03-Advanced/Planners-8-Temporal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/03-Advanced/Planners-8-Temporal.ipynb) | PDDL 2.1, planification temporelle |
+| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-Temporal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-Temporal.ipynb) | STP, consistance temporelle |
 | CSP-4 Scheduling | [Search/Part2-CSP/CSP-4-Scheduling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-4-Scheduling.ipynb) | Ordonnancement, ressources |
-| Planners-3 State-Space Search | [SymbolicAI/Planners/Planners-3-StateSpaceSearch.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-3-StateSpaceSearch.ipynb) | Heuristiques de planification |
+| Planners-3 State-Space Search | [SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb) | Heuristiques de planification |
 
 ### References externes
 - Fox, M., & Long, D. (2003). "PDDL2.1: An Extension to PDDL for Expressing Temporal Planning Domains." *Journal of Artificial Intelligence Research*, 20, 61-124. [JAIR](https://jair.org/index.php/jair/article/view/10352)
@@ -1026,9 +1026,9 @@ Le calcul des equilibres de Nash en strategies mixtes pour des jeux bi-matrice r
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| GT-4 Normal Form | [GameTheory/GameTheory-4-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NormalForm.ipynb) | Jeux en forme normale, matrices de gains |
-| GT-5 Nash Equilibria | [GameTheory/GameTheory-5-NashEquilibria.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-5-NashEquilibria.ipynb) | Equilibres de Nash, Lemke-Howson |
-| GT-4c Zero-Sum/Minimax | [GameTheory/GameTheory-4c-ZeroSumMinimax.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4c-ZeroSumMinimax.ipynb) | Theoreme minimax, dualite LP |
+| GT-4 Normal Form | [GameTheory/GameTheory-2-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-2-NormalForm.ipynb) | Jeux en forme normale, matrices de gains |
+| GT-5 Nash Equilibria | [GameTheory/GameTheory-4-NashEquilibrium.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash, Lemke-Howson |
+| GT-4c Zero-Sum/Minimax | [GameTheory/GameTheory-5-ZeroSum-Minimax.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-5-ZeroSum-Minimax.ipynb) | Theoreme minimax, dualite LP |
 | GT-4 Nash Equilibrium | [GameTheory/GameTheory-4-NashEquilibrium.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash, Lemke-Howson |
 | GT-4b Lean Nash Existence | [GameTheory/GameTheory-4b-Lean-NashExistence.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4b-Lean-NashExistence.ipynb) | Preuve d'existence en Lean 4 |
 
@@ -1061,7 +1061,7 @@ Les encheres combinatoires permettent aux participants de soumettre des offres s
 | GT-16 Mechanism Design | [GameTheory/GameTheory-16-MechanismDesign.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16-MechanismDesign.ipynb) | VCG, encheres, mecanismes d'incitation |
 | SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes d'aggregation |
 | GT-15b Lean Cooperative | [GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb) | Preuve formelle Lean 4 des proprietes VCG |
-| GT-4 Normal Form | [GameTheory/GameTheory-4-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NormalForm.ipynb) | Jeux en forme normale, strategies dominantes |
+| GT-4 Normal Form | [GameTheory/GameTheory-2-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-2-NormalForm.ipynb) | Jeux en forme normale, strategies dominantes |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation CP-SAT, probleme du sac a dos |
 
 ### References externes
@@ -1093,7 +1093,7 @@ La theorie des jeux cooperatifs s'interesse a la formation de coalitions et a la
 | GT-15 Cooperative Games | [GameTheory/GameTheory-15-CooperativeGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15-CooperativeGames.ipynb) | Jeux cooperatifs, valeur de Shapley |
 | GT-15b Lean Cooperative | [GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15b-Lean-CooperativeGames.ipynb) | Verification formelle Lean 4 |
 | GT-15c Cooperative Python | [GameTheory/GameTheory-15c-CooperativeGames-Python.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15c-CooperativeGames-Python.ipynb) | Implementation Python, SHAP values |
-| GT-4 Normal Form | [GameTheory/GameTheory-4-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NormalForm.ipynb) | Prerequis : jeux en forme normale |
+| GT-4 Normal Form | [GameTheory/GameTheory-2-NormalForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-2-NormalForm.ipynb) | Prerequis : jeux en forme normale |
 
 ### References externes
 - Shapley, L.S. (1953). "A Value for n-Person Games." In *Contributions to the Theory of Games*, vol. 2, 307-317. Princeton. [jstor.org](https://www.jstor.org/stable/1960786)
@@ -1122,9 +1122,9 @@ La theorie de la conception de mecanismes (mechanism design) vise a concevoir de
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | GT-16 Mechanism Design | [GameTheory/GameTheory-16-MechanismDesign.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16-MechanismDesign.ipynb) | Conception de mecanismes, VCG |
-| GT-16b Social Choice | [GameTheory/GameTheory-16b-SocialChoice.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16b-SocialChoice.ipynb) | Choix social, theoremes d'impossibilite |
-| GT-16d Arrow SAT | [GameTheory/GameTheory-16d-ArrowSAT.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16d-ArrowSAT.ipynb) | Encodage SAT du theoreme d'Arrow |
-| GT-16e Arrow Z3 | [GameTheory/GameTheory-16e-ArrowZ3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16e-ArrowZ3.ipynb) | Encodage SMT (Z3) |
+| GT-16b Social Choice | [GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb) | Choix social, theoremes d'impossibilite |
+| GT-16d Arrow SAT | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Encodage SAT du theoreme d'Arrow |
+| GT-16e Arrow Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Encodage SMT (Z3) |
 | Arrow SAT (SocialChoice) | [GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb) | Theoreme d'Arrow par SAT, encoding complet |
 | Arrow Lean (SocialChoice) | [GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb) | Preuve formelle Lean 4 d'Arrow |
 | SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes d'aggregation |
@@ -1151,9 +1151,9 @@ CFR is an iterative algorithm that minimizes regret at each information set in e
 |----------|--------|------------|
 | GT-13 Imperfect Info CFR | [GameTheory/GameTheory-13-ImperfectInfo-CFR.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-13-ImperfectInfo-CFR.ipynb) | Information imparfaite, CFR |
 | GT-7 Extensive Form | [GameTheory/GameTheory-7-ExtensiveForm.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-7-ExtensiveForm.ipynb) | Jeux sous forme extensive |
-| GT-5 Zero-Sum Minimax | [GameTheory/GameTheory-5-ZeroSumMinimax.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-5-ZeroSumMinimax.ipynb) | Zero-sum, minimax |
+| GT-5 Zero-Sum Minimax | [GameTheory/GameTheory-5-ZeroSum-Minimax.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-5-ZeroSum-Minimax.ipynb) | Zero-sum, minimax |
 | GT-4b Lean Nash Existence | [GameTheory/GameTheory-4b-Lean-NashExistence.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4b-Lean-NashExistence.ipynb) | Preuve formelle Lean 4 de l'existence de Nash |
-| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logique epistemique, information sets comme mondes de Kripke |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logique epistemique, information sets comme mondes de Kripke |
 
 ### References externes
 - Zinkevich, M. et al. (2008). "Regret Minimization in Games with Incomplete Information." *NeurIPS 2007*. [NeurIPS](https://proceedings.neurips.cc/paper/2007/hash/08d98638c5f4bd8614a3ba2c223ab4a0-Abstract.html)
@@ -1214,7 +1214,7 @@ L'ordonnancement des transactions dans un bloc blockchain est un probleme d'opti
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | SC-7 Solidity Advanced | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb) | Gas, transactions |
-| SC-5 DeFi Fundamentals | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-5-DeFi-AMM.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-5-DeFi-AMM.ipynb) | DeFi, AMM, arbitrage |
+| SC-5 DeFi Fundamentals | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-8-DeFi-Primitives.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-8-DeFi-Primitives.ipynb) | DeFi, AMM, arbitrage |
 | GameTheory/ | [GameTheory/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GameTheory) | Encheres, strategies |
 | CSP-4 Scheduling | [Search/Part2-CSP/CSP-4-Scheduling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-4-Scheduling.ipynb) | Ordonnancement |
 
@@ -1273,8 +1273,8 @@ La gouvernance decentralisee (DAO) pose des problemes de choix social algorithmi
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-9 DAO Governance | [SymbolicAI/SmartContracts/01-Solidity-Basics/SC-9-DAO-Governance.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/01-Solidity-Basics/SC-9-DAO-Governance.ipynb) | DAO, gouvernance |
-| GameTheory/16c-d Social Choice | [GameTheory/16c-d-Social-Choice.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/16c-d-Social-Choice.ipynb) | Theorie du choix social |
+| SC-9 DAO Governance | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-9-DAO-Governance.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-9-DAO-Governance.ipynb) | DAO, gouvernance |
+| GameTheory/16c-d Social Choice | [GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/01-Arrow-Impossibility-Theorem.ipynb) | Theorie du choix social |
 | SC-7 Solidity Advanced | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb) | Token standards, ERC-20 |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Verification formelle |
 
@@ -1307,10 +1307,10 @@ La construction de graphes de connaissances (Knowledge Graphs, KG) repose sur le
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-1 Introduction RDF | [SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb) | Fondamentaux RDF |
-| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb) | Requetes SPARQL |
-| SW-4 SPARQL Advanced | [SymbolicAI/SemanticWeb/SW-4-SPARQL-Advanced.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4-SPARQL-Advanced.ipynb) | SPARQL federated |
-| SW-6 Linked Data | [SymbolicAI/SemanticWeb/SW-6-Linked-Data.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-6-Linked-Data.ipynb) | DBpedia, Wikidata |
+| SW-1 Introduction RDF | [SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb) | Fondamentaux RDF |
+| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | Requetes SPARQL |
+| SW-4 SPARQL Advanced | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | SPARQL federated |
+| SW-6 Linked Data | [SymbolicAI/SemanticWeb/SW-5b-Python-LinkedData.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-5b-Python-LinkedData.ipynb) | DBpedia, Wikidata |
 
 ### References externes
 - Heath, T. & Bizer, C. (2011). "Linked Data: Evolving the Web into a Global Data Space." *Morgan & Claypool Synthesis Lectures*. [Morgan & Claypool](https://doi.org/10.2200/S00334ED1V01Y201102WBE001)
@@ -1338,9 +1338,9 @@ Les ontologies OWL 2 (Web Ontology Language) permettent de definir des connaissa
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb) | OWL 2, axiomes |
-| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb) | HermiT, Pellet |
-| SW-2 RDFS | [SymbolicAI/SemanticWeb/SW-2-RDFS.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-2-RDFS.ipynb) | RDFS, base d'OWL |
+| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | OWL 2, axiomes |
+| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb) | HermiT, Pellet |
+| SW-2 RDFS | [SymbolicAI/SemanticWeb/SW-6-CSharp-RDFS.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-6-CSharp-RDFS.ipynb) | RDFS, base d'OWL |
 
 ### References externes
 - Hitzler, P., et al. (2012). "OWL 2 Web Ontology Language Primer." *W3C Recommendation*. [W3C](https://www.w3.org/TR/owl2-primer/)
@@ -1367,9 +1367,9 @@ Le GraphRAG (Graph-based Retrieval-Augmented Generation) represente une evolutio
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Knowledge-Graphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Knowledge-Graphs.ipynb) | Construction de KG |
-| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb) | Pipeline GraphRAG |
-| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb) | Requetage du graphe |
+| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb) | Construction de KG |
+| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb) | Pipeline GraphRAG |
+| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | Requetage du graphe |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Extraction d'arguments |
 
 ### References externes
@@ -1397,9 +1397,9 @@ SHACL (Shapes Constraint Language) est le standard W3C pour valider des graphes 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-8 SHACL | [SymbolicAI/SemanticWeb/SW-8-SHACL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-8-SHACL.ipynb) | Validation SHACL |
-| SW-1 Introduction RDF | [SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb) | Donnees RDF |
-| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb) | Contraintes SPARQL |
+| SW-8 SHACL | [SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb) | Validation SHACL |
+| SW-1 Introduction RDF | [SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb) | Donnees RDF |
+| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | Contraintes SPARQL |
 
 ### References externes
 - Knublauch, H. & Kontokostas, D. (2017). "Shapes Constraint Language (SHACL)." *W3C Recommendation*. [W3C](https://www.w3.org/TR/shacl/)
@@ -1426,11 +1426,11 @@ Le Web Semantique fournit les briques fondamentales (RDF, OWL, SPARQL, SHACL) po
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-1 RDF Introduction | [SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-1-Introduction-RDF.ipynb) | Bases RDF |
+| SW-1 RDF Introduction | [SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-2b-Python-RDFBasics.ipynb) | Bases RDF |
 | SW-7b Python OWL | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | Raisonnement OWL en Python |
 | SW-8 SHACL | [SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb) | Validation SHACL |
 | SW-4b Python SPARQL | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | Requetage SPARQL |
-| Planners-1 Intro | [SymbolicAI/Planners/Planners-1-Intro.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-Intro.ipynb) | Planification, PDDL |
+| Planners-1 Intro | [SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb) | Planification, PDDL |
 | SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb) | Graphes de connaissances |
 
 ### References externes
@@ -1461,7 +1461,7 @@ Un systeme de maintenance de verite (Truth Maintenance System, TMS) assure la co
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Tweety-4 Belief Revision | [SymbolicAI/Tweety/Tweety-4-Belief-Revision.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-4-Belief-Revision.ipynb) | AGM, revision de croyances |
-| Tweety-1 Propositional | [SymbolicAI/Tweety/Tweety-1-Propositional-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-1-Propositional-Logic.ipynb) | Logique propositionnelle |
+| Tweety-1 Propositional | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Logique propositionnelle |
 | Lean Tactics | [SymbolicAI/Lean/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Lean) | Preuves formelles |
 
 ### References externes
@@ -1489,9 +1489,9 @@ Le raisonnement sur les ontologies OWL 2 constitue un pilier de l'intelligence a
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb) | OWL 2, axiomes |
-| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb) | HermiT, Pellet |
-| Tweety-3 Description Logics | [SymbolicAI/Tweety/Tweety-3-Description-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Description-Logics.ipynb) | Logiques de description |
+| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | OWL 2, axiomes |
+| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb) | HermiT, Pellet |
+| Tweety-3 Description Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques de description |
 
 ### References externes
 - Baader, F., et al. (2007). *The Description Logic Handbook*. Cambridge University Press, 2nd ed. [Cambridge](https://doi.org/10.1017/CBO9780511711787)
@@ -1518,10 +1518,10 @@ La reponse a des questions sur graphes de connaissances (KGQA) consiste a tradui
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Knowledge-Graphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Knowledge-Graphs.ipynb) | KG, requetage |
-| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb) | KG + LLM |
+| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb) | KG, requetage |
+| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb) | KG + LLM |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | NLP, extraction |
-| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-3-SPARQL-Basics.ipynb) | SPARQL |
+| SW-3 SPARQL Basics | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | SPARQL |
 
 ### References externes
 - Lan, Y., et al. (2023). "A Survey on Complex Question Answering over Knowledge Graphs." *ACM Computing Surveys*. [ACM](https://doi.org/10.1145/3556578)
@@ -1548,9 +1548,9 @@ Les logiques de description (Description Logics, DL) constituent le fondement fo
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb) | OWL 2, modelisation |
-| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Reasoners.ipynb) | ELK reasoner |
-| Tweety-3 Description Logics | [SymbolicAI/Tweety/Tweety-3-Description-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Description-Logics.ipynb) | Logiques de description |
+| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | OWL 2, modelisation |
+| SW-13 Reasoners | [SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb) | ELK reasoner |
+| Tweety-3 Description Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques de description |
 
 ### References externes
 - Baader, F., et al. (2007). *The Description Logic Handbook*. Cambridge University Press, 2nd ed. [Cambridge](https://doi.org/10.1017/CBO9780511711787)
@@ -1579,9 +1579,9 @@ La detection automatique de sophismes (fallacies) dans des textes argumentatifs 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Agentic-1 Argument Analysis | [SymbolicAI/Argument_Analysis/Agentic-1-Argument-Detection.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Agentic-1-Argument-Detection.ipynb) | Detection d'arguments |
+| Agentic-1 Argument Analysis | [SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-1-informal_agent.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-1-informal_agent.ipynb) | Detection d'arguments |
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks de Dung |
-| Agentic-2 Fallacies | [SymbolicAI/Argument_Analysis/Agentic-2-Fallacy-Classification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Agentic-2-Fallacy-Classification.ipynb) | Classification sophismes |
+| Agentic-2 Fallacies | [SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-2-pl_agent.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-2-pl_agent.ipynb) | Classification sophismes |
 
 ### References externes
 - Habernal, I., et al. (2017). "Argumentation Mining in User-Generated Web Discourse." *Computational Linguistics*, 43(1), 125-179. [MIT Press](https://doi.org/10.1162/COLI_a_00276)
@@ -1608,7 +1608,7 @@ La generation automatique de contre-arguments a partir d'un argument formalise e
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb) | ASPIC+, regles defaisables |
+| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | ASPIC+, regles defaisables |
 | Tweety-7a Extended Frameworks | [SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb) | Extensions, semantiques |
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks de Dung |
 
@@ -1666,9 +1666,9 @@ L'evaluation automatique de la qualite d'un texte argumentatif requiert de combi
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Agentic-1 Argument Detection | [SymbolicAI/Argument_Analysis/Agentic-1-Argument-Detection.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Agentic-1-Argument-Detection.ipynb) | Detection d'arguments |
-| Agentic-2 Fallacy Classification | [SymbolicAI/Argument_Analysis/Agentic-2-Fallacy-Classification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Agentic-2-Fallacy-Classification.ipynb) | Classification qualite |
-| Agentic-3 Argument Quality | [SymbolicAI/Argument_Analysis/Agentic-3-Argument-Quality.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Agentic-3-Argument-Quality.ipynb) | Evaluation qualite |
+| Agentic-1 Argument Detection | [SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-1-informal_agent.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-1-informal_agent.ipynb) | Detection d'arguments |
+| Agentic-2 Fallacy Classification | [SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-2-pl_agent.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-2-pl_agent.ipynb) | Classification qualite |
+| Agentic-3 Argument Quality | [SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-3-orchestration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis/Argument_Analysis_Agentic-3-orchestration.ipynb) | Evaluation qualite |
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Coherence formelle |
 
 ### References externes
@@ -1697,7 +1697,7 @@ La competition ICCMA (International Competition on Computational Models of Argum
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks de Dung |
-| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb) | Argumentation structuree |
+| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | Argumentation structuree |
 | Tweety-7a Extended Frameworks | [SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb) | Semantiques avancees |
 
 ### References externes
@@ -1725,7 +1725,7 @@ L'argumentation structuree enrichit les frameworks abstraits de Dung en dotant l
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-ASPIC-Structured.ipynb) | ASPIC+, DeLP, ABA |
+| Tweety-6 ASPIC+ | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | ASPIC+, DeLP, ABA |
 | Tweety-7a Extended Frameworks | [SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb) | Extensions, preferences |
 | Tweety-5 Abstract Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Semantiques de Dung |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Application concrete |
@@ -1760,9 +1760,9 @@ Concevoir un systeme multi-agents ou chaque agent possede un role specialise (pl
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Planners-12 LOOP | [SymbolicAI/Planners/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-12-LOOP.ipynb) | Planification, boucle perception-action |
+| Planners-12 LOOP | [SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb) | Planification, boucle perception-action |
 | CSP-9 Distributed | [Search/Part2-CSP/CSP-9-Distributed.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-9-Distributed.ipynb) | CSP distribues, coordination multi-agent |
-| Planners-1 StateSpace | [SymbolicAI/Planners/Planners-1-StateSpace.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-StateSpace.ipynb) | Espaces d'etats, planification classique |
+| Planners-1 StateSpace | [SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-3-State-Space.ipynb) | Espaces d'etats, planification classique |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation CSP de base |
 
 ### References externes
@@ -1790,9 +1790,9 @@ Implementer un agent cognitif qui combine un module symbolique (regles de produc
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb) | Integration LLM et raisonnement symbolique |
-| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb) | Architectures neuro-symboliques |
-| Lean-9 Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb) | Agents cognitifs multi-modules |
+| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | Integration LLM et raisonnement symbolique |
+| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Architectures neuro-symboliques |
+| Lean-9 Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb) | Agents cognitifs multi-modules |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Raisonnement argumentatif hybride |
 
 ### References externes
@@ -1820,10 +1820,10 @@ Creer un serveur MCP (Model Context Protocol) exposant des outils d'analyse symb
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-MultiAgents.ipynb) | Semantic Kernel, orchestration d'outils |
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Integration LLM et solveurs CSP |
+| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb) | Semantic Kernel, orchestration d'outils |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Integration LLM et solveurs CSP |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solveur Z3 SMT |
-| Planners-10 LLM Planning | [SymbolicAI/Planners/Planners-10-LLM-Planning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-10-LLM-Planning.ipynb) | LLM et planification symbolique |
+| Planners-10 LLM Planning | [SymbolicAI/Planners/04-NeuroSymbolic/Planners-10-LLM-Planning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/04-NeuroSymbolic/Planners-10-LLM-Planning.ipynb) | LLM et planification symbolique |
 
 ### References externes
 - Anthropic (2024). *Model Context Protocol*. [modelcontextprotocol.io](https://modelcontextprotocol.io/)
@@ -1850,9 +1850,9 @@ Implementer un pipeline complet ou un LLM traduit des problemes enoncees en lang
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Pipeline LLM vers solveur CSP |
-| Planners-10 LLM Planning | [SymbolicAI/Planners/Planners-10-LLM-Planning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-10-LLM-Planning.ipynb) | Traduction LLM vers PDDL |
-| Planners-12 LOOP | [SymbolicAI/Planners/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-12-LOOP.ipynb) | Boucle observation-planification-action |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Pipeline LLM vers solveur CSP |
+| Planners-10 LLM Planning | [SymbolicAI/Planners/04-NeuroSymbolic/Planners-10-LLM-Planning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/04-NeuroSymbolic/Planners-10-LLM-Planning.ipynb) | Traduction LLM vers PDDL |
+| Planners-12 LOOP | [SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb) | Boucle observation-planification-action |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solveur Z3 SMT, traduction de contraintes |
 
 ### References externes
@@ -1882,7 +1882,7 @@ Multi-Agent Reinforcement Learning (MARL) etend l'apprentissage par renforcement
 |----------|--------|------------|
 | GT-17 Multi-Agent RL | [GameTheory/GameTheory-17-MultiAgent-RL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-17-MultiAgent-RL.ipynb) | MARL, MADDPG, QMIX |
 | RL Multi-Agent | [RL/rl_6_multi_agent_rl.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/RL/rl_6_multi_agent_rl.ipynb) | Reinforcement learning multi-agents |
-| GT-11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique |
+| GT-11 Bayesian Games | [GameTheory/GameTheory-11-BayesianGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-BayesianGames.ipynb) | Information asymetrique |
 
 ### References externes
 - Lowe, R. et al. (2017). "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments." *NeurIPS 2017*. [NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/68a9750337a418a86fe06c1991a1d64c-Abstract.html)
@@ -1945,7 +1945,7 @@ Modeliser le cassage de chiffrements classiques (Vigenere, Enigma simplifie, Pla
 |----------|--------|------------|
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solveur Z3 SMT, modelisation de contraintes |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation CSP, propagation de contraintes |
-| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb) | Contraintes globales, table, regex |
+| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-Advanced.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-Advanced.ipynb) | Contraintes globales, table, regex |
 | SC-15 Cryptography ZKP | [SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb) | Cryptographie, preuves formelles |
 
 ### References externes
@@ -1976,7 +1976,7 @@ Modeliser un protocole cryptographique (Needham-Schroeder, Diffie-Hellman, TLS h
 | SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Verification formelle, model checking |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | SMT solving, contraintes symboliques |
 | SC-7 Solidity Advanced | [SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/02-Solidity-Advanced/SC-7-Token-Standards.ipynb) | Protocoles, securite des communications |
-| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb) | Raisonnement formel, logique |
+| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Raisonnement formel, logique |
 
 ### References externes
 - Blanchet, B. (2016). "Modeling and Verifying Security Protocols with the Applied Pi Calculus and ProVerif." *Foundations and Trends in Privacy and Security*. [Now Publishers](https://nowpublishers.com/article/Details/PRI-053)
@@ -2065,7 +2065,7 @@ Implementer un generateur procedural de niveaux de jeu (plateformes 2D, donjons,
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb) | Contraintes globales, table, patterns |
+| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-Advanced.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-Advanced.ipynb) | Contraintes globales, table, patterns |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation CSP de base |
 | Sudoku/ | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | Grilles, contraintes de placement |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation multi-objectifs |
@@ -2095,10 +2095,10 @@ Implementer un joueur artificiel pour un jeu combinatoire a information complete
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Search-6 Adversarial | [Search/Part1-Foundations/Search-6-Adversarial.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-6-Adversarial.ipynb) | Minimax, alpha-beta, jeux a somme nulle |
-| Search-7 MCTS | [Search/Part1-Foundations/Search-7-MCTS.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-7-MCTS.ipynb) | Monte Carlo Tree Search |
-| App-12 Connect Four | [Search/Applications/Hybrid/App-12-ConnectFour.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-12-ConnectFour.ipynb) | Application Connect Four |
-| App-14 Connect Four RL | [Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb) | Reinforcement Learning sur Connect Four |
+| Search-6 Adversarial | [Search/Part1-Foundations/Search-6-AdversarialSearch.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-6-AdversarialSearch.ipynb) | Minimax, alpha-beta, jeux a somme nulle |
+| Search-7 MCTS | [Search/Part1-Foundations/Search-7-MCTS-And-Beyond.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-7-MCTS-And-Beyond.ipynb) | Monte Carlo Tree Search |
+| App-12 Connect Four | [Search/Applications/Search/App-12-ConnectFour.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Search/App-12-ConnectFour.ipynb) | Application Connect Four |
+| App-14 Connect Four RL | [Search/Applications/Search/App-14-ConnectFour-Adversarial.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Search/App-14-ConnectFour-Adversarial.ipynb) | Reinforcement Learning sur Connect Four |
 | GT-8 Combinatorial Games | [GameTheory/GameTheory-8-CombinatorialGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-8-CombinatorialGames.ipynb) | Theorie des jeux combinatoires |
 | GT-8b Lean Combinatorial | [GameTheory/GameTheory-8b-Lean-CombinatorialGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-8b-Lean-CombinatorialGames.ipynb) | Preuves formelles Lean |
 | GT-8c Combinatorial Python | [GameTheory/GameTheory-8c-CombinatorialGames-Python.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-8c-CombinatorialGames-Python.ipynb) | Implementation Python
@@ -2161,10 +2161,10 @@ Construire un pipeline en deux etapes ou un LLM genere des solutions candidates 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Pipeline LLM vers solveur CSP |
-| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb) | Verification formelle LLM+Lean |
-| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb) | Architectures neuro-symboliques |
-| Planners-12 LOOP | [SymbolicAI/Planners/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-12-LOOP.ipynb) | Boucle generation-verification-action |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Pipeline LLM vers solveur CSP |
+| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | Verification formelle LLM+Lean |
+| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Architectures neuro-symboliques |
+| Planners-12 LOOP | [SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/04-NeuroSymbolic/Planners-12-LOOP.ipynb) | Boucle generation-verification-action |
 
 ### References externes
 - Pan, L. et al. (2023). "Logic-LM: Faithful Logical Reasoning with Large Language Models." *EMNLP 2023*. [ACL Anthology](https://aclanthology.org/2023.emnlp-main.pe/)
@@ -2191,10 +2191,10 @@ Implementer ou utiliser des reseaux de neurones logiques (LNN d'IBM) ou des Logi
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Logiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Logiques.ipynb) | Logiques classiques, semantiques |
-| Tweety-3 Logiques avances | [SymbolicAI/Tweety/Tweety-3-LogiquesAvancees.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-LogiquesAvancees.ipynb) | Logique floue, multimodale |
-| CSP-7 Soft Constraints | [Search/Part2-CSP/CSP-7-SoftConstraints.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-7-SoftConstraints.ipynb) | Contraintes souples, penalites, optimisation |
-| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb) | Integration neural-symbolique |
+| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Logiques classiques, semantiques |
+| Tweety-3 Logiques avances | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logique floue, multimodale |
+| CSP-7 Soft Constraints | [Search/Part2-CSP/CSP-7-Soft.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-7-Soft.ipynb) | Contraintes souples, penalites, optimisation |
+| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Integration neural-symbolique |
 
 ### References externes
 - Riegel, R. et al. (2020). "Logical Neural Networks." *IBM Research*. [arXiv](https://arxiv.org/abs/2006.13155)
@@ -2222,7 +2222,7 @@ Utiliser PySR (PySymbolicRegression) pour decouvrir automatiquement des equation
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Search-5 Genetic Algorithms | [Search/Part1-Foundations/Search-5-GeneticAlgorithms.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-5-GeneticAlgorithms.ipynb) | Algorithmes genetiques, programmation genetique |
-| Search-11 Metaheuristiques | [Search/Part1-Foundations/Search-11-Metaheuristiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-11-Metaheuristiques.ipynb) | Metaheuristiques, optimisation globale |
+| Search-11 Metaheuristiques | [Search/Part1-Foundations/Search-11-Metaheuristics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-11-Metaheuristics.ipynb) | Metaheuristiques, optimisation globale |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation multi-objectifs, Pareto |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Methodes de recherche experimentale |
 
@@ -2251,9 +2251,9 @@ Construire un agent "AI scientist" qui enchaine quatre phases : (1) chargement e
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Search-11 Metaheuristiques | [Search/Part1-Foundations/Search-11-Metaheuristiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-11-Metaheuristiques.ipynb) | Optimisation, recherche globale |
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Hybridation LLM et methodes formelles |
-| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb) | Integration LLM et raisonnement symbolique |
+| Search-11 Metaheuristiques | [Search/Part1-Foundations/Search-11-Metaheuristics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-11-Metaheuristics.ipynb) | Optimisation, recherche globale |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Hybridation LLM et methodes formelles |
+| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | Integration LLM et raisonnement symbolique |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Methodes de recherche, experimentation |
 
 ### References externes
@@ -2284,7 +2284,7 @@ Choisir un benchmark de raisonnement logique (LogicGrid, bAbI, ProofWriter, ou F
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solveur Z3 SMT, raisonnement formel |
 | Sudoku/ | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | Comparaison multi-solveurs de reference |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Raisonnement argumentatif, evaluation |
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Integration LLM et solveurs |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Integration LLM et solveurs |
 
 ### References externes
 - Pan, L. et al. (2023). "Logic-LM: Faithful Logical Reasoning with Large Language Models." *EMNLP 2023*. [ACL Anthology](https://aclanthology.org/2023.emnlp-main.pe/)
@@ -2370,10 +2370,10 @@ Construire un agent LLM capable de generer des preuves formelles en Lean 4 de ma
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Lean-7 LLM Integration | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | LLM + Lean, generation de tactiques |
-| Lean-8 Agentic Proving | [SymbolicAI/Lean/Lean-8-AgenticProving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-AgenticProving.ipynb) | Preuve agentique autonome |
-| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SemanticKernel-MultiAgents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SemanticKernel-MultiAgents.ipynb) | Orchestration multi-agents |
+| Lean-8 Agentic Proving | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Preuve agentique autonome |
+| Lean-9 SK Multi-Agents | [SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-9-SK-Multi-Agents.ipynb) | Orchestration multi-agents |
 | Lean-10 LeanDojo | [SymbolicAI/Lean/Lean-10-LeanDojo.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-10-LeanDojo.ipynb) | LeanDojo, RL pour la preuve |
-| Lean-11 Neural Proving | [SymbolicAI/Lean/Lean-11-NeuralTheoremProving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-11-NeuralTheoremProving.ipynb) | Proverteurs neuronaux |
+| Lean-11 Neural Proving | [SymbolicAI/Lean/Lean-11-TorchLean.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-11-TorchLean.ipynb) | Proverteurs neuronaux |
 
 ### References externes
 - Song, D. et al. (2024). "Towards Large Language Models as Copilots for Theorem Proving in Lean." *arXiv*. [arXiv](https://arxiv.org/abs/2404.12534)
@@ -2405,7 +2405,7 @@ Implementer un algorithme de decouverte causale (PC, FCI, ou GES) qui construit 
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Reseaux bayesiens, graphes de facteurs |
 | GameTheory/ | [GameTheory/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GameTheory) | Theorie des jeux, decision sous incertitude |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation, contraintes sur graphes |
-| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Logiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Logiques.ipynb) | Raisonnement logique, probabiliste |
+| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Raisonnement logique, probabiliste |
 
 ### References externes
 - Spirtes, P. et al. (2000). *Causation, Prediction, and Search*. MIT Press, 2nd ed. [MIT Press](https://mitpress.mit.edu/9780262194402/causation-prediction-and-search/)
@@ -2435,7 +2435,7 @@ Utiliser le framework DoWhy (Microsoft) pour realiser des analyses causales comp
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Reseaux bayesiens, inférence causale |
 | GameTheory/ | [GameTheory/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GameTheory) | Decision sous incertitude, utilite esperee |
 | CSP-5 Optimization | [Search/Part2-CSP/CSP-5-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-5-Optimization.ipynb) | Optimisation sous contraintes |
-| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Logiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Logiques.ipynb) | Raisonnement probabiliste |
+| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Raisonnement probabiliste |
 
 ### References externes
 - Pearl, J. & Mackenzie, D. (2018). *The Book of Why*. Basic Books. [Basic Books](https://www.basicbooks.com/titles/judea-pearl/the-book-of-why/9780465097616/)
@@ -2462,8 +2462,8 @@ Implementer un systeme de diagnostic abductif qui, etant donne un ensemble d'obs
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb) | Argumentation, raisonnement defeasible |
-| Tweety-6 Argumentation avancee | [SymbolicAI/Tweety/Tweety-6-ArgumentationAvancee.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-ArgumentationAvancee.ipynb) | Extensions, acceptabilite semantique |
+| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Argumentation, raisonnement defeasible |
+| Tweety-6 Argumentation avancee | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | Extensions, acceptabilite semantique |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Reseaux bayesiens, diagnostic |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Resolution par contraintes, optimisation |
 
@@ -2492,10 +2492,10 @@ Evaluer si les grands modeles de langage peuvent raisonner causalement de manier
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Evaluation LLM, pipeline symbolique |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Evaluation LLM, pipeline symbolique |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Raisonnement, evaluation d'arguments |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Inférence causale, reseaux bayesiens |
-| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Logiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Logiques.ipynb) | Logique, raisonnement conditionnel |
+| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Logique, raisonnement conditionnel |
 
 ### References externes
 - Zecevic, M. et al. (2023). "Causal Parrots: Large Language Models May Talk Causality But Are Not Causal." *JAIR*. [JAIR](https://www.jair.org/index.php/jair/article/view/14821)
@@ -2557,9 +2557,9 @@ Implementer le calcul relationnel spatial RCC8 (Region Connection Calculus) qui 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-TemporalCSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-TemporalCSP.ipynb) | CSP qualitatifs, propagation de contraintes |
-| Search-10 Automates | [Search/Part1-Foundations/Search-10-AutomatesSymboliques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-10-AutomatesSymboliques.ipynb) | Automates symboliques, raisonnement formel |
-| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-GlobalConstraints.ipynb) | Contraintes globales, tables de compatibilite |
+| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-Temporal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-Temporal.ipynb) | CSP qualitatifs, propagation de contraintes |
+| Search-10 Automates | [Search/Part1-Foundations/Search-10-SymbolicAutomata.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-10-SymbolicAutomata.ipynb) | Automates symboliques, raisonnement formel |
+| CSP-3 Global Constraints | [Search/Part2-CSP/CSP-3-Advanced.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-Advanced.ipynb) | Contraintes globales, tables de compatibilite |
 | CSP-1 Fundamentals | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation CSP, propagation |
 
 ### References externes
@@ -2587,8 +2587,8 @@ Implementer le raisonnement temporel qualitatif base sur l'algebre d'Allen (trei
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-TemporalCSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-TemporalCSP.ipynb) | CSP temporels, algebre d'Allen, STP |
-| Planners-8 Temporal Planning | [SymbolicAI/Planners/Planners-8-TemporalPlanning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-8-TemporalPlanning.ipynb) | Planification temporelle, contraintes de temps |
+| CSP-8 Temporal CSP | [Search/Part2-CSP/CSP-8-Temporal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-8-Temporal.ipynb) | CSP temporels, algebre d'Allen, STP |
+| Planners-8 Temporal Planning | [SymbolicAI/Planners/03-Advanced/Planners-8-Temporal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/03-Advanced/Planners-8-Temporal.ipynb) | Planification temporelle, contraintes de temps |
 | CSP-4 Scheduling | [Search/Part2-CSP/CSP-4-Scheduling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-4-Scheduling.ipynb) | Ordonnancement, IntervalVar |
 | Search-1 StateSpace | [Search/Part1-Foundations/Search-1-StateSpace.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-1-StateSpace.ipynb) | Espaces d'etats, recherche temporelle |
 
@@ -2617,9 +2617,9 @@ Utiliser des bases de connaissances de bon sens (ConceptNet, ATOMIC) comme sourc
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-KnowledgeGraphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-KnowledgeGraphs.ipynb) | Graphes de connaissances, RDF, SPARQL |
-| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-GraphRAG.ipynb) | GraphRAG, retrieval augmente par graphe |
-| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb) | Integration LLM et connaissances symboliques |
+| SW-11 Knowledge Graphs | [SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-11-Python-KnowledgeGraphs.ipynb) | Graphes de connaissances, RDF, SPARQL |
+| SW-12 GraphRAG | [SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-12-Python-GraphRAG.ipynb) | GraphRAG, retrieval augmente par graphe |
+| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | Integration LLM et connaissances symboliques |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Raisonnement, evaluation d'arguments |
 
 ### References externes
@@ -2647,8 +2647,8 @@ Implementer un modele computationnel de la Structure-Mapping Theory (Gentner, 19
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Logiques.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Logiques.ipynb) | Raisonnement logique, structures relationnelles |
-| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Symbolique.ipynb) | Comparaison raisonnement symbolique vs LLM |
+| Tweety-2 Logiques | [SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Basic-Logics.ipynb) | Raisonnement logique, structures relationnelles |
+| Lean-7 LLM+Symbolique | [SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-7-LLM-Integration.ipynb) | Comparaison raisonnement symbolique vs LLM |
 | Search-1 StateSpace | [Search/Part1-Foundations/Search-1-StateSpace.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-1-StateSpace.ipynb) | Espaces d'etats, graphes, matching |
 | Argument Analysis | [SymbolicAI/Argument_Analysis/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Argument_Analysis) | Raisonnement, comparaison de structures |
 
@@ -2714,7 +2714,7 @@ La verification de politiques d'apprentissage par renforcement consiste a garant
 |----------|--------|------------|
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | SMT solving avec Z3 |
 | CSP-1 Fondamentaux | [Search/Part2-CSP/CSP-1-Fundamentals.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-1-Fundamentals.ipynb) | Modelisation par contraintes |
-| CSP-3 Consistance | [Search/Part2-CSP/CSP-3-Consistency.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-3-Consistency.ipynb) | Propagation et filtrage |
+| CSP-3 Consistance | [Search/Part2-CSP/CSP-2-Consistency.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-2-Consistency.ipynb) | Propagation et filtrage |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Prototypage RL + verification |
 
 ### References externes
@@ -2744,7 +2744,7 @@ Les agents bases sur des grands modeles de langage (LLM) interagissent avec des 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | SMT/SAT solving |
-| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logiques modales et temporelles |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques modales et temporelles |
 | SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Verification formelle |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Papers emergents |
 
@@ -2777,7 +2777,7 @@ Les reseaux de neurones binaires (Binarized Neural Networks, BNN) remplacent tou
 | Lean-11 TorchLean | [SymbolicAI/Lean/Lean-11-TorchLean.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-11-TorchLean.ipynb) | Framework Lean 4 pour verification de NN |
 | Lean-12 Sensitivity Theorem | [SymbolicAI/Lean/Lean-12-Sensitivity-Theorem.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-12-Sensitivity-Theorem.ipynb) | Sensitivity Theorem, port Lean de Huang 2019 |
 | sensitivity_lean/ | [SymbolicAI/Lean/sensitivity_lean/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/SymbolicAI/Lean/sensitivity_lean/) | Module Lean formel, theoreme principal |
-| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-NeuroSymbolic.ipynb) | Architectures neural-symboliques |
+| Lean-8 NeuroSymbolic | [SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-8-Agentic-Proving.ipynb) | Architectures neural-symboliques |
 
 ### References externes
 - Huang, H. (2019). "Induced Subgraphs of Hypercubes and a Proof of the Sensitivity Conjecture." *Annals of Mathematics*, 190(3), 871-881. [arXiv](https://arxiv.org/abs/1907.00847)
@@ -2807,8 +2807,8 @@ La logique deontique est la branche de la logique formelle qui traite des concep
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-2 Advanced Logics | [SymbolicAI/Tweety/Tweety-2-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Advanced-Logics.ipynb) | Logiques avancees, deontique |
-| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Semantique des mondes possibles |
+| Tweety-2 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques avancees, deontique |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Semantique des mondes possibles |
 | Tweety-9 Preferences | [SymbolicAI/Tweety/Tweety-9-Preferences.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-9-Preferences.ipynb) | Raisonnement sur les preferences |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solving de contraintes |
 
@@ -2869,9 +2869,9 @@ Le raisonnement juridique est par nature argumentatif : plusieurs interpretation
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Argumentation.ipynb) | Frameworks de Dung, ASPIC+ |
+| Tweety-5 Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks de Dung, ASPIC+ |
 | Tweety-6 Structured Argumentation | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | Argumentation structuree |
-| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7-OWL-Ontologies.ipynb) | Representation de connaissances juridiques |
+| SW-7 OWL Ontologies | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | Representation de connaissances juridiques |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solving de contraintes |
 
 ### References externes
@@ -2903,7 +2903,7 @@ La revision des croyances est le processus par lequel un agent rationnel met a j
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | Tweety-4 Belief Revision | [SymbolicAI/Tweety/Tweety-4-Belief-Revision.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-4-Belief-Revision.ipynb) | AGM, revision, contraction |
-| Tweety-2 Advanced Logics | [SymbolicAI/Tweety/Tweety-2-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-2-Advanced-Logics.ipynb) | Logiques non-classiques |
+| Tweety-2 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques non-classiques |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Consistance, SAT solving |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Prototypage avance |
 
@@ -2967,8 +2967,8 @@ La logique epistemique formalise le raisonnement sur la connaissance et la croya
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logiques modales, Kripke |
-| GameTheory/11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques modales, Kripke |
+| GameTheory/11 Bayesian Games | [GameTheory/GameTheory-11-BayesianGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-BayesianGames.ipynb) | Information asymetrique |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Solving de contraintes |
 | Research/ | [Research/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Research) | Prototypage epistemique |
 
@@ -3000,9 +3000,9 @@ La logique epistemique formalise le raisonnement sur la connaissance et la croya
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Logiques modales, modeles de Kripke |
+| Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques modales, modeles de Kripke |
 | Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Preuve formelle de proprietes epistemiques en Lean 4 |
-| GT-11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique, croyances |
+| GT-11 Bayesian Games | [GameTheory/GameTheory-11-BayesianGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-BayesianGames.ipynb) | Information asymetrique, croyances |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Resolution de contraintes |
 | QC-Py-08 Multi-Asset | [QuantConnect/Python/QC-Py-08-Multi-Asset-Strategies.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-08-Multi-Asset-Strategies.ipynb) | Strategies multi-actifs, correlations |
 | QC-Py-13 Alpha Models | [QuantConnect/Python/QC-Py-13-Alpha-Models.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-13-Alpha-Models.ipynb) | Modeles alpha, signaux |
@@ -3033,10 +3033,10 @@ Le Web Semantique offre un cadre formel pour representer, interroger et raisonne
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SemanticWeb-1 Ontology | [SymbolicAI/SemanticWeb/SemanticWeb-1-Ontology-Engineering.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SemanticWeb-1-Ontology-Engineering.ipynb) | Ontologies OWL, engineering |
-| SemanticWeb-2 SPARQL | [SymbolicAI/SemanticWeb/SemanticWeb-2-SPARQL-Query.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SemanticWeb-2-SPARQL-Query.ipynb) | Requetes SPARQL |
-| SemanticWeb-3 OWL-RL | [SymbolicAI/SemanticWeb/SemanticWeb-3-OWL-RL-Reasoning.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SemanticWeb-3-OWL-RL-Reasoning.ipynb) | Raisonnement OWL-RL |
-| SemanticWeb-4 SHACL | [SymbolicAI/SemanticWeb/SemanticWeb-4-SHACL-Validation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SemanticWeb-4-SHACL-Validation.ipynb) | Validation de contraintes |
+| SemanticWeb-1 Ontology | [SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-7b-Python-OWL.ipynb) | Ontologies OWL, engineering |
+| SemanticWeb-2 SPARQL | [SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-4b-Python-SPARQL.ipynb) | Requetes SPARQL |
+| SemanticWeb-3 OWL-RL | [SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-13-Python-Reasoners.ipynb) | Raisonnement OWL-RL |
+| SemanticWeb-4 SHACL | [SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SemanticWeb/SW-8-Python-SHACL.ipynb) | Validation de contraintes |
 | QC-Py-05 Universe Selection | [QuantConnect/Python/QC-Py-05-Universe-Selection.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-05-Universe-Selection.ipynb) | Selection d'univers, filtrage |
 | QC-Py-16 Alternative Data | [QuantConnect/Python/QC-Py-16-Alternative-Data.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-16-Alternative-Data.ipynb) | Donnees alternatives, ESG |
 
@@ -3066,9 +3066,9 @@ Les protocoles de finance decentrlaisee (DeFi) gerent des milliards de dollars d
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SC-14 Formal Verification | [SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-14-Formal-Verification.ipynb) | Verification formelle Solidity |
-| SC-15 Zero-Knowledge Proofs | [SymbolicAI/SmartContracts/SC-15-Zero-Knowledge-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-15-Zero-Knowledge-Proofs.ipynb) | ZKP, circuits arithmetiques |
-| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/SC-13-Fuzz-Testing.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/SC-13-Fuzz-Testing.ipynb) | Fuzzing, detection de bugs |
+| SC-14 Formal Verification | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-14-Formal-Verification.ipynb) | Verification formelle Solidity |
+| SC-15 Zero-Knowledge Proofs | [SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/04-Privacy-Cryptography/SC-15-Zero-Knowledge-Proofs.ipynb) | ZKP, circuits arithmetiques |
+| SC-13 Fuzz Testing | [SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/SmartContracts/03-Foundry-Testing/SC-13-Fuzz-Invariants.ipynb) | Fuzzing, detection de bugs |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3 SMT Solver |
 | QC-Py-07 Futures/Forex | [QuantConnect/Python/QC-Py-07-Futures-Forex.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-07-Futures-Forex.ipynb) | Marches crypto, donnees |
 
@@ -3132,7 +3132,7 @@ Les strategies d'options multi-jambes (straddles, strangles, butterflies, iron c
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety/Tweety-7 ASP | [SymbolicAI/Tweety/Tweety-7-ASP-Clingo.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-7-ASP-Clingo.ipynb) | ASP/Clingo, regles de choix, contraintes |
+| Tweety/Tweety-7 ASP | [SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-7a-Extended-Frameworks.ipynb) | ASP/Clingo, regles de choix, contraintes |
 | QC-Py-06 Options Trading | [QuantConnect/Python/QC-Py-06-Options-Trading.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-06-Options-Trading.ipynb) | Framework Options, multi-jambes, grecs |
 | QC-Py-12 Backtesting Analysis | [QuantConnect/Python/QC-Py-12-Backtesting-Analysis.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-12-Backtesting-Analysis.ipynb) | Metriques de performance, analyse statistique |
 | OptionsIncome project | [QuantConnect/projects/OptionsIncome/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/QuantConnect/projects/OptionsIncome) | Strategies d'options revenu (template projet) |
@@ -3202,13 +3202,13 @@ Le Research-Executor de CoursIA fournit 8 strategies de recherche backtestees in
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety/Tweety-1 Argumentation | [SymbolicAI/Tweety/Tweety-1-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-1-Argumentation.ipynb) | Frameworks Dung, extensions, semantiques |
+| Tweety/Tweety-1 Argumentation | [SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Abstract-Argumentation.ipynb) | Frameworks Dung, extensions, semantiques |
 | Research-Executor | [QuantConnect/projects/Research-Executor/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/QuantConnect/projects/Research-Executor) | 8 strategies backtestees pretes a fusionner |
 | QC-Py-13 Alpha Models | [QuantConnect/Python/QC-Py-13-Alpha-Models.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-13-Alpha-Models.ipynb) | Alpha Insights API, ensembling natif QC |
 | QC-Py-14 Portfolio Construction | [QuantConnect/Python/QC-Py-14-Portfolio-Construction-Execution.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-14-Portfolio-Construction-Execution.ipynb) | Portfolio construction model, allocation |
 | QC-Py-28 Regime Detection | [QuantConnect/Python/QC-Py-28-Market-Regime-Detection.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-28-Market-Regime-Detection.ipynb) | Detection de regimes pour contexte d'attaques |
-| Tweety-5 Voting/Social Choice | [SymbolicAI/Tweety/Tweety-5-Voting-Social-Choice.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-5-Voting-Social-Choice.ipynb) | Arrow/Sen, procedures de vote, axiomes |
-| GT-16e/16f Social Choice | [GameTheory/16e-Social-Choice.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/16e-Social-Choice.ipynb) | Arrow/Sen corollaires, comparaison semantiques |
+| Tweety-5 Voting/Social Choice | [GameTheory/SocialChoice/03-Voting-Methods.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/03-Voting-Methods.ipynb) | Arrow/Sen, procedures de vote, axiomes |
+| GT-16e/16f Social Choice | [GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/02-Lean-SocialChoice-Formal.ipynb) | Arrow/Sen corollaires, comparaison semantiques |
 
 ### References externes
 - Dung, P.M. (1995). "On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games." *Artificial Intelligence*, 77(2), 321-357. [ScienceDirect](https://doi.org/10.1016/0004-3702(94)00041-X)
@@ -3238,7 +3238,7 @@ Avant de deployer un bot de trading en live (capital reel), il faut prouver form
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Tweety/Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Modal-Logic.ipynb) | Modal logic, structures de Kripke |
+| Tweety/Tweety-3 Modal Logic | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Modal logic, structures de Kripke |
 | QC-Py-09 Order Types | [QuantConnect/Python/QC-Py-09-Order-Types.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-09-Order-Types.ipynb) | Modeles d'ordres (market, limit, stop), transitions |
 | QC-Py-15 Parameter Optimization | [QuantConnect/Python/QC-Py-15-Parameter-Optimization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-15-Parameter-Optimization.ipynb) | Optimisation hyperparametres, robustesse |
 | QC-Py-27 Production Deployment | [QuantConnect/Python/QC-Py-27-Production-Deployment.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-27-Production-Deployment.ipynb) | Deployment live, monitoring |
@@ -3344,7 +3344,7 @@ La theorie de la capture reglementaire (Stigler, 1971 ; Laffont & Tirole, 1993) 
 | Tweety-6 Structured Argumentation | [SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-6-Structured-Argumentation.ipynb) | Argumentation structuree, ASPIC+ |
 | Tweety-3 Advanced Logics | [SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-3-Advanced-Logics.ipynb) | Logiques modales, epistemique |
 | Lean-3 Propositions | [SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Lean/Lean-3-Propositions-Proofs.ipynb) | Preuve formelle de structures epistemiques |
-| GT-11 Bayesian Games | [GameTheory/GameTheory-11-Bayesian-Games.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-Bayesian-Games.ipynb) | Information asymetrique |
+| GT-11 Bayesian Games | [GameTheory/GameTheory-11-BayesianGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-11-BayesianGames.ipynb) | Information asymetrique |
 | SocialChoice/04 Aggregation Z3 | [GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/SocialChoice/04-Computational-Aggregation-SAT-Z3.ipynb) | Verification Z3 des proprietes informationnelles |
 | Tweety-8 Agent Dialogues | [SymbolicAI/Tweety/Tweety-8-Agent-Dialogues.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Tweety/Tweety-8-Agent-Dialogues.ipynb) | Dialogues strategiques |
 
