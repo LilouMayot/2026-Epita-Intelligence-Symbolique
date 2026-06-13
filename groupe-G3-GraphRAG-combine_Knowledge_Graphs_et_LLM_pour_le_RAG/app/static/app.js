@@ -26,17 +26,17 @@ function setAppState(s) {
   const newChatBtn = document.getElementById('new-chat-btn');
   if (s === 'ready') {
     input.disabled = false; sendBtn.disabled = false;
-    badge.classList.remove('visible'); buildBtn.textContent = '✓ Knowledge Graph construit';
+    badge.classList.remove('visible'); buildBtn.textContent = '✓ Knowledge Graph built';
     buildBtn.disabled = true; exportBtn.disabled = false; newChatBtn.disabled = false;
     document.getElementById('progress-box').style.display = 'none';
     loadGraph();
   } else if (s === 'building') {
     input.disabled = true; sendBtn.disabled = true;
-    badge.textContent = '⚙ Construction du KG en cours…'; badge.classList.add('visible');
+    badge.textContent = '⚙ Building KG…'; badge.classList.add('visible');
     buildBtn.disabled = true; exportBtn.disabled = true; newChatBtn.disabled = true;
   } else {
     input.disabled = true; sendBtn.disabled = true;
-    badge.textContent = '⏳ Uploadez vos documents d\'abord'; badge.classList.add('visible');
+    badge.textContent = '⏳ Upload your documents first'; badge.classList.add('visible');
     buildBtn.disabled = false; exportBtn.disabled = true; newChatBtn.disabled = true;
   }
 }
@@ -120,7 +120,7 @@ document.getElementById('build-btn').addEventListener('click', async () => {
       el.className = 'prog-step ' + (elIdx < stageIdx ? 'done' : elIdx === stageIdx ? 'active-s' : '');
     });
     if (stage === 'done') { es.close(); setAppState('ready'); }
-    if (stage === 'error') { es.close(); alert('Erreur: ' + message); setAppState('upload'); }
+    if (stage === 'error') { es.close(); alert('Error: ' + message); setAppState('upload'); }
   };
 });
 
@@ -159,7 +159,7 @@ async function sendMessage() {
     chatHistory.push({ role: 'user', content: q });
     chatHistory.push({ role: 'assistant', content: data.answer });
   } catch (err) {
-    updateMessage(typingId, null, 'Erreur lors de la requête.');
+    updateMessage(typingId, null, 'Request failed.');
   }
 }
 
@@ -203,23 +203,23 @@ function updateMessage(id, data, errorText) {
   const chip = document.createElement('div');
   chip.innerHTML = `
     <span class="chip" id="${chipId}" onclick="toggleDrawer('${chipId}','${drawerId}')">
-      ⚡ ${hopCount}-hop · ${nodeCount} entités · ${docCount} docs — voir le détail ↓
+      ⚡ ${hopCount}-hop · ${nodeCount} entities · ${docCount} docs — see details ↓
     </span>
     <div class="drawer" id="${drawerId}">
       <div class="drawer-inner">
-        <div class="drawer-label">🔍 Étapes de raisonnement</div>
+        <div class="drawer-label">🔍 Reasoning steps</div>
         ${data.trace.map(s => `
           <div class="step-row">
             <div class="step-dot-n">${s.hop}</div>
             <div>
               <div class="step-title">Hop ${s.hop} — ${s.relation}</div>
-              <div class="step-desc">Depuis : ${s.from_node}</div>
+              <div class="step-desc">From: ${s.from_node}</div>
               <div class="etags">${s.to_nodes.map(n => `<span class="etag">${n}</span>`).join('')}</div>
             </div>
           </div>`).join('')}
-        <div class="drawer-label" style="margin-top:10px">📄 Documents sources</div>
+        <div class="drawer-label" style="margin-top:10px">📄 Source documents</div>
         <div class="docs-used-list">
-          ${data.docs_used.length ? data.docs_used.map(d => `<div class="doc-used-item">📄 <strong>${d.filename}</strong></div>`).join('') : '<div style="font-size:11px;color:#94a3b8">Aucun document tracé</div>'}
+          ${data.docs_used.length ? data.docs_used.map(d => `<div class="doc-used-item">📄 <strong>${d.filename}</strong></div>`).join('') : '<div style="font-size:11px;color:#94a3b8">No documents traced</div>'}
         </div>
       </div>
     </div>`;
@@ -291,7 +291,7 @@ function renderGraph(data) {
   node.on('mouseover', (event, d) => {
     const rels = data.edges.filter(e => e.source === d.id || e.target === d.id)
       .map(e => `<div class="tt-rel">${e.source} →[${e.relation}]→ ${e.target}</div>`).join('');
-    tooltip.innerHTML = `<div class="tt-name">${d.id}</div><div class="tt-type">Communauté ${d.community + 1}</div>${rels}`;
+    tooltip.innerHTML = `<div class="tt-name">${d.id}</div><div class="tt-type">Community ${d.community + 1}</div>${rels}`;
     tooltip.style.display = 'block';
     tooltip.style.left = (event.pageX + 12) + 'px';
     tooltip.style.top = (event.pageY - 20) + 'px';
@@ -383,7 +383,7 @@ async function initDocList() {
  */
 async function exportKG() {
   const res = await fetch(`${API}/export`);
-  if (!res.ok) { alert('Export impossible : le graphe n\'est pas encore construit.'); return; }
+  if (!res.ok) { alert('Export failed: graph not built yet.'); return; }
   const blob = await res.blob();
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -406,7 +406,7 @@ async function importKG() {
   const res = await fetch(`${API}/import`, { method: 'POST', body: fd });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    alert('Import échoué : ' + (err.detail || 'fichier .graphrag invalide.'));
+    alert('Import failed: ' + (err.detail || 'invalid .graphrag file.'));
     return;
   }
   const { docs } = await res.json();
@@ -423,7 +423,7 @@ document.getElementById('new-chat-btn').addEventListener('click', () => {
   const area = document.getElementById('chat-area');
   area.innerHTML = `<div class="msg msg-bot">
     <div class="msg-bot-hdr">✦ GraphRAG</div>
-    <span class="msg-text">Nouvelle discussion démarrée. Posez votre question !</span>
+    <span class="msg-text">New conversation started. Ask your question!</span>
   </div>`;
 });
 

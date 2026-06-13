@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,42 +28,42 @@
     <div id="drop-zone" class="upload-zone">
       <input type="file" id="file-input" multiple accept=".pdf,.txt,.md">
       <div class="upload-icon">📄</div>
-      <div class="upload-title">Glissez vos documents ici</div>
+      <div class="upload-title">Drop your documents here</div>
       <div class="upload-sub">PDF, TXT, Markdown</div>
-      <div class="upload-btn">+ Ajouter des fichiers</div>
+      <div class="upload-btn">+ Add files</div>
     </div>
 
     <div class="dataset-toggle">
-      <button class="ds-btn active" data-ds="custom">Corpus custom</button>
+      <button class="ds-btn active" data-ds="custom">Custom corpus</button>
       <button class="ds-btn" data-ds="hotpotqa">HotpotQA</button>
     </div>
 
     <div class="docs-list" style="padding:0 13px;flex:1;overflow-y:auto">
-      <div class="docs-label">Documents actifs</div>
+      <div class="docs-label">Active documents</div>
       <div id="docs-list"></div>
     </div>
 
     <div id="progress-box" class="progress-box" style="display:none">
       <div class="progress-label">
-        <span id="progress-label-text">Initialisation…</span>
+        <span id="progress-label-text">Initializing…</span>
         <span class="progress-pct" id="progress-pct">0%</span>
       </div>
       <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
       <div class="progress-steps">
-        <div class="prog-step" id="prog-extraction"><div class="prog-dot"></div>Extraction des entités</div>
-        <div class="prog-step" id="prog-graph_build"><div class="prog-dot"></div>Construction du graphe RDF</div>
-        <div class="prog-step" id="prog-community_detection"><div class="prog-dot"></div>Détection de communautés (Leiden)</div>
-        <div class="prog-step" id="prog-indexing"><div class="prog-dot"></div>Indexation</div>
+        <div class="prog-step" id="prog-extraction"><div class="prog-dot"></div>Entity extraction</div>
+        <div class="prog-step" id="prog-graph_build"><div class="prog-dot"></div>RDF graph construction</div>
+        <div class="prog-step" id="prog-community_detection"><div class="prog-dot"></div>Community detection (Leiden)</div>
+        <div class="prog-step" id="prog-indexing"><div class="prog-dot"></div>Indexing</div>
       </div>
     </div>
 
     <div class="sidebar-actions">
-      <button class="reset-btn visible" id="reset-btn">↺ Réinitialiser le corpus</button>
-      <button class="export-btn" id="export-btn" disabled>⬇ Exporter le graphe (.graphrag)</button>
-      <label class="import-label" for="import-input">⬆ Importer le graphe (.graphrag)
+      <button class="reset-btn visible" id="reset-btn">↺ Reset corpus</button>
+      <button class="export-btn" id="export-btn" disabled>⬇ Export graph (.graphrag)</button>
+      <label class="import-label" for="import-input">⬆ Load snapshot (.graphrag)
         <input type="file" id="import-input" accept=".graphrag" style="display:none">
       </label>
-      <button class="build-btn" id="build-btn" disabled>⚡ Construire le Knowledge Graph</button>
+      <button class="build-btn" id="build-btn" disabled>⚡ Build Knowledge Graph</button>
     </div>
   </aside>
 
@@ -71,8 +71,8 @@
   <div class="right">
     <div class="tab-bar">
       <div class="tab active" data-tab="qa">💬 Q&amp;A</div>
-      <div class="tab" data-tab="graph">🕸 Graphe de connaissances</div>
-      <button class="new-chat-btn" id="new-chat-btn" disabled>↺ Nouvelle discussion</button>
+      <div class="tab" data-tab="graph">🕸 Knowledge Graph</div>
+      <button class="new-chat-btn" id="new-chat-btn" disabled>↺ New conversation</button>
     </div>
 
     <!-- Q&A Tab -->
@@ -80,15 +80,15 @@
       <div class="chat-area" id="chat-area">
         <div class="msg msg-bot">
           <div class="msg-bot-hdr">✦ GraphRAG</div>
-          <div class="msg-text msg-md">Bienvenue ! Uploadez des documents et construisez le Knowledge Graph pour commencer.</div>
+          <div class="msg-text msg-md">Welcome! Upload documents and build the Knowledge Graph to get started.</div>
         </div>
       </div>
       <div class="input-bar">
         <div class="input-wrap">
-          <div class="input-badge visible" id="input-badge">⏳ Uploadez vos documents d'abord</div>
-          <input class="chat-input" id="chat-input" placeholder="Posez une question sur vos documents…" disabled>
+          <div class="input-badge visible" id="input-badge">⏳ Upload your documents first</div>
+          <input class="chat-input" id="chat-input" placeholder="Ask a question about your documents…" disabled>
         </div>
-        <button class="send-btn" id="send-btn" disabled>Envoyer →</button>
+        <button class="send-btn" id="send-btn" disabled>Send →</button>
       </div>
     </div>
 
@@ -97,11 +97,11 @@
       <div class="graph-panel">
         <div class="graph-toolbar">
           <div class="live-dot"></div>
-          <div class="g-stat"><strong id="stat-nodes">—</strong> entités</div>
+          <div class="g-stat"><strong id="stat-nodes">—</strong> entities</div>
           <div class="g-sep"></div>
           <div class="g-stat"><strong id="stat-edges">—</strong> relations</div>
           <div class="g-sep"></div>
-          <div class="g-stat"><strong id="stat-comms">—</strong> communautés</div>
+          <div class="g-stat"><strong id="stat-comms">—</strong> communities</div>
           <div class="comm-filters-wrap"><div class="comm-filters" id="comm-filters"></div></div>
         </div>
         <svg id="graph-svg" style="flex:1;width:100%"></svg>

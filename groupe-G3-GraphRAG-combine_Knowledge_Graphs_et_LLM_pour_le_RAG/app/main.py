@@ -143,15 +143,15 @@ async def _build_gen() -> AsyncGenerator[str, None]:
         if state["active_dataset"] == "hotpotqa":
             txt_files = [f for f in src.iterdir() if f.suffix == ".txt"]
             if not txt_files:
-                yield _sse("extraction", 0, "Téléchargement HotpotQA (50 exemples)…")
+                yield _sse("extraction", 0, "Downloading HotpotQA (50 samples)…")
                 await asyncio.sleep(0)
                 await asyncio.to_thread(_download_hotpotqa, src, 50)
-                yield _sse("extraction", 5, "HotpotQA téléchargé.")
+                yield _sse("extraction", 5, "HotpotQA downloaded.")
                 await asyncio.sleep(0)
 
         files = [f for f in src.iterdir() if f.is_file() and f.suffix == ".txt"]
         if not files:
-            yield _sse("error", 0, "Aucun document trouvé.")
+            yield _sse("error", 0, "No documents found.")
             return
 
         docs_map: dict = {f.name: f.read_text(encoding="utf-8", errors="ignore") for f in files}
@@ -164,7 +164,7 @@ async def _build_gen() -> AsyncGenerator[str, None]:
                 triples = await asyncio.to_thread(extract_triples, text, llm)
                 return name, triples
 
-        yield _sse("extraction", 5, f"{n} fichiers — extraction parallèle ({workers} workers)…")
+        yield _sse("extraction", 5, f"{n} files — parallel extraction ({workers} workers)…")
         await asyncio.sleep(0)
 
         all_triples = []
@@ -177,13 +177,13 @@ async def _build_gen() -> AsyncGenerator[str, None]:
             yield _sse("extraction", progress, f"({done}/{n}) {name}")
             await asyncio.sleep(0)
 
-        yield _sse("extraction", 40, f"{len(all_triples)} triplets extraits")
-        yield _sse("graph_build", 50, "Construction du graphe RDF…")
+        yield _sse("extraction", 40, f"{len(all_triples)} triples extracted")
+        yield _sse("graph_build", 50, "Building RDF graph…")
         await asyncio.sleep(0)
-        yield _sse("community_detection", 70, "Détection de communautés (Leiden)…")
+        yield _sse("community_detection", 70, "Community detection (Leiden)…")
         await asyncio.sleep(0)
         kg = build_knowledge_graph(all_triples, docs_map)
-        yield _sse("indexing", 90, "Indexation pour le retrieval…")
+        yield _sse("indexing", 90, "Indexing for retrieval…")
         await asyncio.sleep(0)
         state["kg"] = kg
         state["docs_map"] = docs_map
@@ -191,7 +191,7 @@ async def _build_gen() -> AsyncGenerator[str, None]:
         yield _sse(
             "done",
             100,
-            f"KG prêt — {s['node_count']} entités, {s['edge_count']} relations, {s['community_count']} communautés",
+            f"KG ready — {s['node_count']} entities, {s['edge_count']} relations, {s['community_count']} communities",
         )
     except Exception as e:
         yield _sse("error", 0, str(e))
@@ -224,7 +224,7 @@ async def get_graph():
         HTTPException: 404 if the knowledge graph has not been built yet.
     """
     if state["kg"] is None:
-        raise HTTPException(404, "KG non construit")
+        raise HTTPException(404, "KG not built")
     return graph_to_json(state["kg"])
 
 
@@ -309,7 +309,7 @@ async def select_dataset(req: DatasetSelectRequest):
             or ``"custom"``.
     """
     if req.dataset not in ("hotpotqa", "custom"):
-        raise HTTPException(400, "Dataset inconnu. Valeurs: hotpotqa | custom")
+        raise HTTPException(400, "Unknown dataset. Values: hotpotqa | custom")
     state["active_dataset"] = req.dataset
     state["kg"] = None
     return {"active": req.dataset}
@@ -331,7 +331,7 @@ async def export_kg():
         HTTPException: 400 if no KG has been built yet.
     """
     if state["kg"] is None:
-        raise HTTPException(400, "KG non construit — construisez le graphe d'abord.")
+        raise HTTPException(400, "KG not built — build the graph first.")
 
     triples_data = [
         {"subject": u, "relation": d.get("relation", ""), "object": v}
@@ -375,7 +375,7 @@ async def import_kg(file: UploadFile = File(...)):
             triples_data = json.loads(zf.read("triples.json"))
             docs_map = json.loads(zf.read("docs.json"))
     except (zipfile.BadZipFile, KeyError) as exc:
-        raise HTTPException(400, f"Fichier .graphrag invalide : {exc}")
+        raise HTTPException(400, f"Invalid .graphrag file: {exc}")
 
     from graphrag_core.extractor import Triple
     triples = [Triple(t["subject"], t["relation"], t["object"]) for t in triples_data]

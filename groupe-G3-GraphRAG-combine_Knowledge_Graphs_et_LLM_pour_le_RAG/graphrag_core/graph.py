@@ -117,12 +117,12 @@ def _detect_communities(G: nx.DiGraph) -> List[Community]:
         ig_g = ig.Graph(n=len(nodes), edges=edges)
         partition = leidenalg.find_partition(ig_g, leidenalg.ModularityVertexPartition)
         return [
-            Community(id=i, nodes=[nodes[j] for j in cluster], label=f"Communauté {i + 1}")
+            Community(id=i, nodes=[nodes[j] for j in cluster], label=f"Community {i + 1}")
             for i, cluster in enumerate(partition)
         ]
     except ImportError:
         return [
-            Community(id=i, nodes=list(comp), label=f"Communauté {i + 1}")
+            Community(id=i, nodes=list(comp), label=f"Community {i + 1}")
             for i, comp in enumerate(nx.connected_components(U))
         ]
 
