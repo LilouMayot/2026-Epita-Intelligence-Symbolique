@@ -55,7 +55,7 @@ Rules:
 - Answer directly. Do NOT start with phrases like "Based on the context", "According to the knowledge graph", etc.
 - Do NOT end with phrases like "That's all the information available" or "This is everything the context provides".
 - If the context is insufficient, say only: "I don't have enough information to answer this."
-- Be concise and factual.
+- Use markdown formatting: bullet points, bold, headers where appropriate.
 
 Context:
 {context}
