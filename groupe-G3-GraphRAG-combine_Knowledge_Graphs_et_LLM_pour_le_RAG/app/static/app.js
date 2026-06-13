@@ -77,12 +77,10 @@ document.querySelectorAll('.ds-btn').forEach(btn => {
     const ds = btn.dataset.ds;
     await fetch(`${API}/dataset/select`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ dataset: ds }) });
     document.getElementById('reset-btn').classList.toggle('visible', ds === 'custom');
-    if (ds === 'hotpotqa') {
-      const { datasets } = await (await fetch(`${API}/datasets`)).json();
-      document.getElementById('docs-list').innerHTML = '';
-      datasets.hotpotqa.files.forEach(addDocItem);
-      if (datasets.hotpotqa.files.length > 0) document.getElementById('build-btn').disabled = false;
-    }
+    const { datasets } = await (await fetch(`${API}/datasets`)).json();
+    document.getElementById('docs-list').innerHTML = '';
+    datasets[ds].files.forEach(addDocItem);
+    if (datasets[ds].files.length > 0) document.getElementById('build-btn').disabled = false;
     setAppState('upload');
   });
 });
@@ -359,4 +357,16 @@ function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
  */
 function dragend(event, d) { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }
 
+/**
+ * Restores the document list from the server on page load.
+ * Fetches /datasets and populates the sidebar with existing files.
+ */
+async function initDocList() {
+  const { active, datasets } = await (await fetch(`${API}/datasets`)).json();
+  const files = datasets[active].files;
+  files.forEach(addDocItem);
+  if (files.length > 0) document.getElementById('build-btn').disabled = false;
+}
+
 setAppState('upload');
+initDocList();

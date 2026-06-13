@@ -93,11 +93,39 @@ def _sse(stage: str, progress: int, message: str) -> str:
     return f"data: {json.dumps({'stage': stage, 'progress': progress, 'message': message})}\n\n"
 
 
+def _download_hotpotqa(output_dir: Path, num_samples: int = 50) -> None:
+    """Download a subset of HotpotQA and write sample .txt files + qa_pairs.json.
+
+    Runs synchronously — call via ``asyncio.to_thread`` from async context.
+
+    Args:
+        output_dir: Directory where sample_XXXX.txt and qa_pairs.json are written.
+        num_samples: Number of validation samples to download.
+    """
+    from datasets import load_dataset
+    ds = load_dataset("hotpotqa/hotpot_qa", "fullwiki", split="validation", streaming=True)
+    samples = []
+    for i, row in enumerate(ds):
+        if i >= num_samples:
+            break
+        samples.append(row)
+    for i, sample in enumerate(samples):
+        parts = []
+        for title, sentences in zip(sample["context"]["title"], sample["context"]["sentences"]):
+            parts.append(f"# {title}\n" + " ".join(sentences))
+        (output_dir / f"sample_{i:04d}.txt").write_text("\n\n".join(parts), encoding="utf-8")
+    qa_pairs = [{"question": s["question"], "answer": s["answer"]} for s in samples]
+    (output_dir / "qa_pairs.json").write_text(
+        json.dumps(qa_pairs, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
 async def _build_gen() -> AsyncGenerator[str, None]:
     """Async generator that builds the knowledge graph and streams SSE progress.
 
-    Reads all files from the active dataset directory, extracts triples via
+    Reads all .txt files from the active dataset directory, extracts triples via
     the LLM, constructs the KnowledgeGraph, and stores it in ``state``.
+    For HotpotQA, automatically downloads 50 samples if the directory is empty.
     Progress is emitted as SSE frames at each major stage.  If an exception
     occurs at any point an SSE error frame is emitted and the generator
     returns.
@@ -108,7 +136,18 @@ async def _build_gen() -> AsyncGenerator[str, None]:
     try:
         llm = get_llm_client()
         src = HOTPOTQA_DIR if state["active_dataset"] == "hotpotqa" else CUSTOM_DIR
-        files = [f for f in src.iterdir() if f.is_file()]
+
+        # Auto-download HotpotQA if selected but no .txt files present yet
+        if state["active_dataset"] == "hotpotqa":
+            txt_files = [f for f in src.iterdir() if f.suffix == ".txt"]
+            if not txt_files:
+                yield _sse("extraction", 0, "Téléchargement HotpotQA (50 exemples)…")
+                await asyncio.sleep(0)
+                await asyncio.to_thread(_download_hotpotqa, src, 50)
+                yield _sse("extraction", 5, "HotpotQA téléchargé.")
+                await asyncio.sleep(0)
+
+        files = [f for f in src.iterdir() if f.is_file() and f.suffix == ".txt"]
         if not files:
             yield _sse("error", 0, "Aucun document trouvé.")
             return
@@ -230,7 +269,7 @@ async def list_datasets():
         "active": state["active_dataset"],
         "datasets": {
             "custom": {"files": [f.name for f in CUSTOM_DIR.iterdir() if f.is_file()]},
-            "hotpotqa": {"files": [f.name for f in HOTPOTQA_DIR.iterdir() if f.is_file()]},
+            "hotpotqa": {"files": [f.name for f in HOTPOTQA_DIR.iterdir() if f.suffix == ".txt"]},
         },
     }
 
