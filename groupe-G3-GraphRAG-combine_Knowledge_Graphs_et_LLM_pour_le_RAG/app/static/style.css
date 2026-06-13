@@ -61,7 +61,10 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#f0f4ff;color:#1a1f
 
 /* Right panel */
 .right{display:flex;flex-direction:column;overflow:hidden}
-.tab-bar{background:#fff;border-bottom:1px solid rgba(99,102,241,.1);padding:0 20px;display:flex;box-shadow:0 1px 10px rgba(99,102,241,.05)}
+.tab-bar{background:#fff;border-bottom:1px solid rgba(99,102,241,.1);padding:0 20px;display:flex;align-items:center;box-shadow:0 1px 10px rgba(99,102,241,.05)}
+.new-chat-btn{margin-left:auto;font-size:11px;font-weight:600;color:#94a3b8;background:transparent;border:1px solid #e2e8f0;border-radius:20px;padding:5px 13px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.new-chat-btn:not(:disabled):hover{color:#6366f1;border-color:rgba(99,102,241,.3)}
+.new-chat-btn:disabled{opacity:.4;cursor:not-allowed}
 .tab{font-size:13px;font-weight:600;padding:13px 18px;border-bottom:2.5px solid transparent;color:#94a3b8;cursor:pointer;transition:all .15s}
 .tab.active{color:#6366f1;border-bottom-color:#6366f1}
 .tab-content{display:none;flex:1;flex-direction:column;overflow:hidden}

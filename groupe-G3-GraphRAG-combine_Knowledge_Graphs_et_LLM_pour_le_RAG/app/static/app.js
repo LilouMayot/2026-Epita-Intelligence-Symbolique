@@ -23,20 +23,21 @@ function setAppState(s) {
   const badge = document.getElementById('input-badge');
   const buildBtn = document.getElementById('build-btn');
   const exportBtn = document.getElementById('export-btn');
+  const newChatBtn = document.getElementById('new-chat-btn');
   if (s === 'ready') {
     input.disabled = false; sendBtn.disabled = false;
     badge.classList.remove('visible'); buildBtn.textContent = '✓ Knowledge Graph construit';
-    buildBtn.disabled = true; exportBtn.disabled = false;
+    buildBtn.disabled = true; exportBtn.disabled = false; newChatBtn.disabled = false;
     document.getElementById('progress-box').style.display = 'none';
     loadGraph();
   } else if (s === 'building') {
     input.disabled = true; sendBtn.disabled = true;
     badge.textContent = '⚙ Construction du KG en cours…'; badge.classList.add('visible');
-    buildBtn.disabled = true; exportBtn.disabled = true;
+    buildBtn.disabled = true; exportBtn.disabled = true; newChatBtn.disabled = true;
   } else {
     input.disabled = true; sendBtn.disabled = true;
     badge.textContent = '⏳ Uploadez vos documents d\'abord'; badge.classList.add('visible');
-    buildBtn.disabled = false; exportBtn.disabled = true;
+    buildBtn.disabled = false; exportBtn.disabled = true; newChatBtn.disabled = true;
   }
 }
 
@@ -416,6 +417,15 @@ async function importKG() {
 
 document.getElementById('export-btn').addEventListener('click', exportKG);
 document.getElementById('import-input').addEventListener('change', importKG);
+
+document.getElementById('new-chat-btn').addEventListener('click', () => {
+  chatHistory = [];
+  const area = document.getElementById('chat-area');
+  area.innerHTML = `<div class="msg msg-bot">
+    <div class="msg-bot-hdr">✦ GraphRAG</div>
+    <span class="msg-text">Nouvelle discussion démarrée. Posez votre question !</span>
+  </div>`;
+});
 
 setAppState('upload');
 initDocList();
