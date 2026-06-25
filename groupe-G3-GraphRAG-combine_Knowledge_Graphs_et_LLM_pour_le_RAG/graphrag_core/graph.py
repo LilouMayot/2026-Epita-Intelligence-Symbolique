@@ -201,3 +201,49 @@ def community_overview(kg: KnowledgeGraph) -> Dict[str, Any]:
             "community_count": len(kg.communities),
         },
     }
+
+
+def community_detail(kg: KnowledgeGraph, community_id: int, limit: int = 150) -> Dict[str, Any]:
+    """Serialise a single community's nodes and internal edges.
+
+    Nodes are sorted by degree (descending) and truncated to *limit* so the
+    payload stays bounded even for very large communities.
+
+    Args:
+        kg: The KnowledgeGraph to read from.
+        community_id: The id of the community to expand.
+        limit: Maximum number of nodes to return. Defaults to 150.
+
+    Returns:
+        A dict with ``nodes`` (id/community/color/degree dicts), ``edges``
+        (source/target/relation dicts between returned nodes only),
+        ``truncated`` (whether the community has more members than
+        *limit*), and ``total_in_community`` (the untruncated member count).
+    """
+    members: List[str] = next((c.nodes for c in kg.communities if c.id == community_id), [])
+    G = kg.nx_graph
+    members_sorted = sorted(members, key=lambda n: G.degree(n), reverse=True)
+    total = len(members_sorted)
+    selected = members_sorted[:limit]
+    selected_set = set(selected)
+
+    nodes = [
+        {
+            "id": n,
+            "community": community_id,
+            "color": _COLORS[community_id % len(_COLORS)],
+            "degree": G.degree(n),
+        }
+        for n in selected
+    ]
+    edges = [
+        {"source": u, "target": v, "relation": d.get("relation", "")}
+        for u, v, d in G.edges(data=True)
+        if u in selected_set and v in selected_set
+    ]
+    return {
+        "nodes": nodes,
+        "edges": edges,
+        "truncated": total > limit,
+        "total_in_community": total,
+    }

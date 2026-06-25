@@ -1,6 +1,7 @@
 import os
 import time
 from abc import ABC, abstractmethod
+from typing import Optional, List
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,7 +12,7 @@ class LLMClient(ABC):
     """Abstract base class for LLM provider clients."""
 
     @abstractmethod
-    def complete(self, prompt: str, history: list | None = None) -> str:
+    def complete(self, prompt: str, history: Optional[List] = None) -> str:
         """Send a prompt and return the model's text response.
 
         Args:
@@ -39,7 +40,7 @@ class OpenAIClient(LLMClient):
         self._client = OpenAI(api_key=api_key)
         self.model = model
 
-    def complete(self, prompt: str, history: list | None = None) -> str:
+    def complete(self, prompt: str, history: Optional[List] = None) -> str:
         """Send a prompt to OpenAI and return the response text.
 
         Args:
@@ -68,7 +69,7 @@ class AnthropicClient(LLMClient):
         self._client = anthropic.Anthropic(api_key=api_key)
         self.model = model
 
-    def complete(self, prompt: str, history: list | None = None) -> str:
+    def complete(self, prompt: str, history: Optional[List] = None) -> str:
         """Send a prompt to Anthropic and return the response text.
 
         Retries up to 5 times with exponential backoff on 429 rate-limit
@@ -112,7 +113,7 @@ class OllamaClient(LLMClient):
         self.model = model
         self.base_url = base_url
 
-    def complete(self, prompt: str, history: list | None = None) -> str:
+    def complete(self, prompt: str, history: Optional[List] = None) -> str:
         """Send a prompt to Ollama and return the response text.
 
         Uses the ``/api/chat`` endpoint so that conversation history is passed

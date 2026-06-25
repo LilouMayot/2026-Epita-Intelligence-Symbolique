@@ -65,3 +65,36 @@ def test_community_overview_structure():
     assert total_size == 4
     for c in data["communities"]:
         assert set(c.keys()) == {"id", "label", "size", "color"}
+
+
+def test_community_detail_returns_members():
+    """community_detail returns the community's nodes, untruncated when under the limit."""
+    from graphrag_core.graph import community_detail
+    kg = build_knowledge_graph(TRIPLES, {})
+    cid = kg.node_to_community["Alice"]
+    data = community_detail(kg, cid)
+    ids = {n["id"] for n in data["nodes"]}
+    assert "Alice" in ids
+    assert data["truncated"] is False
+    assert "edges" in data
+
+
+def test_community_detail_truncates_with_limit():
+    """community_detail truncates to `limit`, sorted by degree descending, and reports the total."""
+    from graphrag_core.graph import community_detail
+    kg = build_knowledge_graph(TRIPLES, {})
+    cid = kg.node_to_community["Alice"]
+    data = community_detail(kg, cid, limit=1)
+    assert len(data["nodes"]) == 1
+    assert data["truncated"] is True
+    assert data["total_in_community"] >= 2
+
+
+def test_community_detail_unknown_id_empty():
+    """community_detail returns an empty result for a community id that doesn't exist."""
+    from graphrag_core.graph import community_detail
+    kg = build_knowledge_graph(TRIPLES, {})
+    data = community_detail(kg, 9999)
+    assert data["nodes"] == []
+    assert data["edges"] == []
+    assert data["truncated"] is False
