@@ -4,6 +4,8 @@ let lastSubgraphNodes = [];
 let lastSubgraphEdges = [];
 let simulation = null;
 let graphData = null;
+let gMain = null, gLinks = null, gNodes = null;
+const MAX_NODES = 300;
 /** @type {Array<{role: string, content: string}>} */
 let chatHistory = [];
 
@@ -29,7 +31,7 @@ function setAppState(s) {
     badge.classList.remove('visible'); buildBtn.textContent = '✓ Knowledge Graph built';
     buildBtn.disabled = true; exportBtn.disabled = false; newChatBtn.disabled = false;
     document.getElementById('progress-box').style.display = 'none';
-    loadGraphOverview();
+    loadHubs();
   } else if (s === 'building') {
     input.disabled = true; sendBtn.disabled = true;
     badge.textContent = '⚙ Building KG…'; badge.classList.add('visible');
@@ -100,7 +102,7 @@ document.getElementById('reset-btn').addEventListener('click', async () => {
 
 document.getElementById('graph-back-btn').addEventListener('click', () => {
   document.getElementById('load-more-btn').style.display = 'none';
-  loadGraphOverview();
+  loadHubs();
 });
 
 document.getElementById('load-more-btn').addEventListener('click', async () => {
@@ -253,58 +255,27 @@ function toggleDrawer(chipId, drawerId) {
   chip.textContent = base + (isOpen ? ' ↓' : ' ↑');
 }
 
-let viewMode = 'overview';
+let viewMode = 'detail';
 let overviewData = null;
 let currentCommunityId = null;
 let currentLimit = 150;
 
+/** Returns visual radius for a node based on degree. */
+function nodeRadius(d) { return Math.max(4, Math.sqrt((d.degree || 1) + 1) * 2.8); }
+
 /**
- * Fetches the community-level overview and renders it as clickable bubbles.
+ * Loads the top hub nodes from the backend and renders them as the entry view.
  */
-async function loadGraphOverview() {
+async function loadHubs() {
   try {
-    const data = await (await fetch(`${API}/graph/overview`)).json();
-    overviewData = data;
-    viewMode = 'overview';
+    const data = await (await fetch(`${API}/graph/hubs?limit=60`)).json();
+    graphData = { nodes: data.nodes, edges: data.edges };
+    viewMode = 'detail';
     document.getElementById('graph-back-btn').style.display = 'none';
     document.getElementById('load-more-btn').style.display = 'none';
-    renderOverview(data);
-    renderCommunityFilters(data.communities);
-    document.getElementById('stat-nodes').textContent = data.stats.node_count;
-    document.getElementById('stat-edges').textContent = data.stats.edge_count;
-    document.getElementById('stat-comms').textContent = data.stats.community_count;
+    gMain = null; // force SVG reset for clean start
+    renderGraph(graphData);
   } catch (_) {}
-}
-
-/**
- * Renders one circle per community, sized by member count, via a D3 pack layout.
- * @param {Object} data - Response from GET /graph/overview.
- */
-function renderOverview(data) {
-  const svg = d3.select('#graph-svg');
-  svg.selectAll('*').remove();
-  const W = document.getElementById('graph-svg').clientWidth;
-  const H = document.getElementById('graph-svg').clientHeight;
-  const g = svg.append('g');
-  svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', e => g.attr('transform', e.transform)));
-
-  const root = d3.pack().size([W - 20, H - 20]).padding(8)(
-    d3.hierarchy({ children: data.communities }).sum(d => d.size || 1)
-  );
-
-  const bubble = g.selectAll('g').data(root.children || []).enter().append('g')
-    .attr('class', 'comm-bubble')
-    .attr('transform', d => `translate(${d.x + 10},${d.y + 10})`)
-    .on('click', (event, d) => openCommunity(d.data.id));
-
-  bubble.append('circle').attr('r', d => d.r)
-    .attr('fill', d => d.data.color + '22').attr('stroke', d => d.data.color).attr('stroke-width', 2);
-
-  bubble.append('text').text(d => d.data.label).attr('text-anchor', 'middle').attr('dy', -4)
-    .attr('font-size', 11).attr('fill', d => d.data.color).attr('font-weight', 700);
-
-  bubble.append('text').text(d => `${d.data.size} entities`).attr('text-anchor', 'middle').attr('dy', 11)
-    .attr('font-size', 9).attr('fill', d => d.data.color);
 }
 
 /**
@@ -319,6 +290,7 @@ async function openCommunity(id) {
   graphData = { nodes: data.nodes, edges: data.edges };
   document.getElementById('graph-back-btn').style.display = 'inline-block';
   document.getElementById('load-more-btn').style.display = data.truncated ? 'inline-block' : 'none';
+  gMain = null; // reset SVG for clean context switch
   renderGraph(graphData);
 }
 
@@ -334,6 +306,15 @@ function mergeIntoGraph(newNodes, newEdges) {
   const existingIds = new Set(graphData.nodes.map(n => n.id));
   for (const n of newNodes) {
     if (!existingIds.has(n.id)) { graphData.nodes.push(n); existingIds.add(n.id); }
+  }
+  // Cap at MAX_NODES — evict lowest-degree nodes when over limit
+  if (graphData.nodes.length > MAX_NODES) {
+    graphData.nodes.sort((a, b) => b.degree - a.degree);
+    graphData.nodes = graphData.nodes.slice(0, MAX_NODES);
+    const keep = new Set(graphData.nodes.map(n => n.id));
+    const sId = e => typeof e.source === 'object' ? e.source.id : e.source;
+    const tId = e => typeof e.target === 'object' ? e.target.id : e.target;
+    graphData.edges = graphData.edges.filter(e => keep.has(sId(e)) && keep.has(tId(e)));
   }
   const edgeKey = e => {
     const s = typeof e.source === 'object' ? e.source.id : e.source;
@@ -369,61 +350,83 @@ async function loadMoreCommunity() {
 }
 
 /**
- * Renders a D3.js force-directed graph into the #graph-svg element.
- * @param {Object} data - Graph data with nodes, edges arrays and stats.
+ * Renders a D3.js force-directed graph, Obsidian-style.
+ * Uses enter/update/exit so existing nodes keep their positions on expansion.
+ * @param {Object} data - Graph data with nodes and edges arrays.
  */
 function renderGraph(data) {
-  const svg = d3.select('#graph-svg');
-  svg.selectAll('*').remove();
-  const W = document.getElementById('graph-svg').clientWidth;
-  const H = document.getElementById('graph-svg').clientHeight;
-  const g = svg.append('g');
-  svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', e => g.attr('transform', e.transform)));
+  const svgEl = document.getElementById('graph-svg');
+  const W = svgEl.clientWidth, H = svgEl.clientHeight;
+  const svg = d3.select(svgEl);
 
-  svg.append('defs').append('marker')
-    .attr('id', 'arr').attr('markerWidth', 6).attr('markerHeight', 6).attr('refX', 14).attr('refY', 3).attr('orient', 'auto')
-    .append('path').attr('d', 'M0,0 L0,6 L6,3 z').attr('fill', '#c7d2fe');
+  // One-time SVG setup (reset when gMain is null)
+  if (!gMain) {
+    svg.selectAll('*').remove();
+    const defs = svg.append('defs');
+    const f = defs.append('filter').attr('id', 'glow').attr('x', '-40%').attr('y', '-40%').attr('width', '180%').attr('height', '180%');
+    f.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '3').attr('result', 'blur');
+    const fm = f.append('feMerge');
+    fm.append('feMergeNode').attr('in', 'blur');
+    fm.append('feMergeNode').attr('in', 'SourceGraphic');
 
-  const link = g.append('g').selectAll('line').data(data.edges).enter().append('line')
-    .attr('stroke', '#ddd6fe').attr('stroke-width', 1.5).attr('marker-end', 'url(#arr)')
-    .attr('class', d => `edge-${d.source}-${d.target}`);
+    gMain = svg.append('g');
+    svg.call(d3.zoom().scaleExtent([0.05, 10]).on('zoom', e => gMain.attr('transform', e.transform)));
+    gLinks = gMain.append('g');
+    gNodes = gMain.append('g');
 
-  const node = g.append('g').selectAll('g').data(data.nodes).enter().append('g')
-    .attr('class', 'node').call(d3.drag().on('start', dragstart).on('drag', dragged).on('end', dragend));
+    simulation = d3.forceSimulation()
+      .force('link', d3.forceLink().id(d => d.id).distance(75))
+      .force('charge', d3.forceManyBody().strength(-160).distanceMax(250))
+      .force('center', d3.forceCenter(W / 2, H / 2))
+      .force('collision', d3.forceCollide().radius(d => nodeRadius(d) + 3))
+      .alphaDecay(0.025).velocityDecay(0.4)
+      .on('tick', () => {
+        gLinks.selectAll('line').attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+        gNodes.selectAll('g.node').attr('transform', d => `translate(${d.x},${d.y})`);
+      });
+  }
 
-  node.append('circle').attr('r', d => 8 + Math.min(d.degree * 2, 14))
-    .attr('fill', '#fff').attr('stroke', d => d.color).attr('stroke-width', 2.5)
-    .style('filter', d => `drop-shadow(0 1px 6px ${d.color}55)`);
+  // Links — enter/exit
+  const edgeKey = d => { const s = typeof d.source === 'object' ? d.source.id : d.source; const t = typeof d.target === 'object' ? d.target.id : d.target; return `${s}||${t}`; };
+  const linkSel = gLinks.selectAll('line').data(data.edges, edgeKey);
+  linkSel.enter().append('line').attr('stroke', '#1e1e2e').attr('stroke-width', 1).attr('opacity', 0)
+    .transition().duration(500).attr('opacity', 0.55);
+  linkSel.exit().transition().duration(200).attr('opacity', 0).remove();
 
-  node.append('text').text(d => d.id).attr('text-anchor', 'middle').attr('dy', 4)
-    .attr('font-size', 9).attr('fill', d => d.color).attr('font-weight', '600')
-    .style('pointer-events', 'none');
-
-  node.on('click', (event, d) => expandNode(d.id));
-
+  // Nodes — enter/exit
   const tooltip = document.getElementById('graph-tooltip');
-  node.on('mouseover', (event, d) => {
-    const srcId = e => typeof e.source === 'object' ? e.source.id : e.source;
-    const tgtId = e => typeof e.target === 'object' ? e.target.id : e.target;
-    const rels = data.edges.filter(e => srcId(e) === d.id || tgtId(e) === d.id)
-      .map(e => `<div class="tt-rel">${srcId(e)} →[${e.relation}]→ ${tgtId(e)}</div>`).join('');
-    tooltip.innerHTML = `<div class="tt-name">${d.id}</div><div class="tt-type">Community ${d.community + 1}</div>${rels}`;
-    tooltip.style.display = 'block';
-    tooltip.style.left = (event.pageX + 12) + 'px';
-    tooltip.style.top = (event.pageY - 20) + 'px';
-  }).on('mousemove', event => {
-    tooltip.style.left = (event.pageX + 12) + 'px';
-    tooltip.style.top = (event.pageY - 20) + 'px';
-  }).on('mouseout', () => { tooltip.style.display = 'none'; });
+  const nodeJoin = gNodes.selectAll('g.node').data(data.nodes, d => d.id);
+  const entering = nodeJoin.enter().append('g').attr('class', 'node')
+    .call(d3.drag().on('start', dragstart).on('drag', dragged).on('end', dragend))
+    .on('click', (event, d) => expandNode(d.id))
+    .on('mouseover', (event, d) => {
+      const sId = e => typeof e.source === 'object' ? e.source.id : e.source;
+      const tId = e => typeof e.target === 'object' ? e.target.id : e.target;
+      const rels = data.edges.filter(e => sId(e) === d.id || tId(e) === d.id).slice(0, 6)
+        .map(e => `<div class="tt-rel">${sId(e)} →[${e.relation}]→ ${tId(e)}</div>`).join('');
+      tooltip.innerHTML = `<div class="tt-name">${d.id}</div><div class="tt-type">degree ${d.degree}</div>${rels}`;
+      tooltip.style.display = 'block'; tooltip.style.left = (event.pageX + 12) + 'px'; tooltip.style.top = (event.pageY - 20) + 'px';
+    }).on('mousemove', e => { tooltip.style.left = (e.pageX + 12) + 'px'; tooltip.style.top = (e.pageY - 20) + 'px'; })
+    .on('mouseout', () => { tooltip.style.display = 'none'; });
 
-  simulation = d3.forceSimulation(data.nodes)
-    .force('link', d3.forceLink(data.edges).id(d => d.id).distance(80))
-    .force('charge', d3.forceManyBody().strength(-200))
-    .force('center', d3.forceCenter(W / 2, H / 2))
-    .on('tick', () => {
-      link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-      node.attr('transform', d => `translate(${d.x},${d.y})`);
-    });
+  entering.append('circle').attr('r', d => nodeRadius(d))
+    .attr('fill', d => d.color).attr('fill-opacity', 0.82)
+    .attr('stroke', d => d.color).attr('stroke-width', 0.5)
+    .style('filter', 'url(#glow)').attr('opacity', 0)
+    .transition().duration(450).attr('opacity', 1);
+
+  entering.append('text')
+    .text(d => d.id.length > 22 ? d.id.slice(0, 22) + '…' : d.id)
+    .attr('text-anchor', 'middle').attr('dy', d => nodeRadius(d) + 9)
+    .attr('font-size', 7).attr('fill', '#8888bb').style('pointer-events', 'none')
+    .attr('opacity', 0).transition().delay(250).duration(400)
+    .attr('opacity', d => d.degree > 3 ? 0.8 : 0.4);
+
+  nodeJoin.exit().transition().duration(200).attr('opacity', 0).remove();
+
+  simulation.nodes(data.nodes);
+  simulation.force('link').links(data.edges);
+  simulation.alpha(0.3).restart();
 }
 
 /**
@@ -455,6 +458,7 @@ function showFocusSubgraph(nodeNames, edgeTuples) {
   graphData = { nodes, edges };
   document.getElementById('graph-back-btn').style.display = 'inline-block';
   document.getElementById('load-more-btn').style.display = 'none';
+  gMain = null; // reset SVG for clean context switch
   renderGraph(graphData);
 }
 

@@ -168,11 +168,19 @@ def graph_to_json(kg: KnowledgeGraph) -> Dict[str, Any]:
     }
 
 
+_OVERVIEW_MAX = 30   # max bubbles shown; smaller communities are folded into "Other"
+_OVERVIEW_MIN = 5    # communities with fewer nodes than this are folded into "Other"
+
+
 def community_overview(kg: KnowledgeGraph) -> Dict[str, Any]:
     """Serialise only the community-level summary of a KnowledgeGraph.
 
     Unlike graph_to_json, this never lists individual nodes — the payload
     size depends only on the number of communities, not on graph size.
+
+    Small communities (< _OVERVIEW_MIN nodes) and any beyond _OVERVIEW_MAX
+    are folded into a single synthetic "Other" entry so the bubble overview
+    stays readable regardless of how many communities Leiden produced.
 
     Args:
         kg: The KnowledgeGraph to summarise.
@@ -184,17 +192,30 @@ def community_overview(kg: KnowledgeGraph) -> Dict[str, Any]:
     sizes: Dict[int, int] = {}
     for cid in kg.node_to_community.values():
         sizes[cid] = sizes.get(cid, 0) + 1
-    communities = [
-        {
-            "id": c.id,
-            "label": c.label,
-            "size": sizes.get(c.id, 0),
-            "color": _COLORS[c.id % len(_COLORS)],
-        }
-        for c in kg.communities
-    ]
+
+    all_communities = sorted(
+        [
+            {
+                "id": c.id,
+                "label": c.label,
+                "size": sizes.get(c.id, 0),
+                "color": _COLORS[c.id % len(_COLORS)],
+            }
+            for c in kg.communities
+        ],
+        key=lambda c: c["size"],
+        reverse=True,
+    )
+
+    shown = [c for c in all_communities if c["size"] >= _OVERVIEW_MIN][:_OVERVIEW_MAX]
+    shown_ids = {c["id"] for c in shown}
+    other_size = sum(c["size"] for c in all_communities if c["id"] not in shown_ids)
+
+    if other_size > 0:
+        shown.append({"id": -1, "label": "Other", "size": other_size, "color": "#94a3b8"})
+
     return {
-        "communities": communities,
+        "communities": shown,
         "stats": {
             "node_count": kg.nx_graph.number_of_nodes(),
             "edge_count": kg.nx_graph.number_of_edges(),
@@ -300,3 +321,36 @@ def node_neighbors(kg: KnowledgeGraph, node_name: str, limit: int = 40) -> Dict[
         edges.append({"source": src, "target": tgt, "relation": rel})
 
     return {"nodes": nodes, "edges": edges, "truncated": total > limit}
+
+
+def hub_subgraph(kg: KnowledgeGraph, limit: int = 60) -> Dict[str, Any]:
+    """Return the top-degree nodes as a seed graph for interactive exploration.
+
+    Selects the *limit* highest-degree nodes and all edges between them.
+    This gives a compact, navigable starting view regardless of graph size.
+
+    Args:
+        kg: The KnowledgeGraph to sample from.
+        limit: Number of hub nodes to return. Defaults to 60.
+
+    Returns:
+        A dict with ``nodes`` (id/community/color/degree) and ``edges``
+        (source/target/relation) — only edges between the selected hubs.
+    """
+    G = kg.nx_graph
+    top_nodes = sorted(G.nodes(), key=lambda n: G.degree(n), reverse=True)[:limit]
+    top_set = set(top_nodes)
+    nodes = [
+        {
+            "id": n,
+            "community": kg.node_to_community.get(n, 0),
+            "color": _COLORS[kg.node_to_community.get(n, 0) % len(_COLORS)],
+            "degree": G.degree(n),
+        }
+        for n in top_nodes
+    ]
+    edges = [
+        {"source": u, "target": v, "relation": d.get("relation", "")}
+        for u, v, d in G.subgraph(top_set).edges(data=True)
+    ]
+    return {"nodes": nodes, "edges": edges}

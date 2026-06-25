@@ -28,6 +28,7 @@ from graphrag_core.graph import (
     community_overview,
     community_detail,
     node_neighbors,
+    hub_subgraph,
 )
 from graphrag_core.pipeline import run as pipeline_run
 from app.models import (
@@ -270,6 +271,24 @@ async def graph_node_neighbors(node_name: str, limit: int = 40):
     if state["kg"] is None:
         raise HTTPException(404, "KG not built")
     return node_neighbors(state["kg"], node_name, limit)
+
+
+@app.get("/graph/hubs")
+async def graph_hubs(limit: int = 60):
+    """Return the top-degree hub nodes as a seed graph for exploration.
+
+    Args:
+        limit: Number of hub nodes to return, highest-degree first.
+
+    Returns:
+        A dict with ``nodes`` and ``edges`` between them.
+
+    Raises:
+        HTTPException: 404 if the knowledge graph has not been built yet.
+    """
+    if state["kg"] is None:
+        raise HTTPException(404, "KG not built")
+    return hub_subgraph(state["kg"], limit)
 
 
 @app.post("/query", response_model=QueryResponse)
