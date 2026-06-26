@@ -1,182 +1,97 @@
-"""
-Preferred Extension for Dung Argumentation Frameworks
-======================================================
-Finds the first preferred extension of a directed NetworkX graph (AF),
-optionally constrained to contain a given set of arguments.
-
-Complexity note:
-    Finding a preferred extension is Sigma_2^P-complete (NP^NP).
-    The reference algorithm (Nofal, Atkinson & Dunne, 2014) uses
-    backtracking with admissibility-based pruning, which is the
-    state-of-the-art approach and avoids the naive 2^n enumeration.
-
-Reference:
-    Nofal, S., Atkinson, K., & Dunne, P. E. (2014).
-    "Algorithms for decision problems in argument systems under
-    preferred semantics." Artificial Intelligence, 207, 23-51.
-"""
-
 import networkx as nx
+from ortools.sat.python import cp_model
 
 
-# ---------------------------------------------------------------------------
-# Core AF helpers
-# ---------------------------------------------------------------------------
+def _build_model(AF, required_in=frozenset()):
+    model = cp_model.CpModel()
 
-def _attackers(graph: nx.DiGraph, node) -> frozenset:
-    """Return the set of nodes that attack `node`."""
-    return frozenset(graph.predecessors(node))
+    args = list(AF.nodes())
+    x = {a: model.NewBoolVar(f"x_{a}") for a in args}
 
+    # Arguments imposés
+    for a in required_in:
+        model.Add(x[a] == 1)
 
-def _attacked_by_set(graph: nx.DiGraph, S: frozenset) -> frozenset:
-    """Return the set of all nodes attacked by any member of S."""
-    return frozenset(v for u in S for v in graph.successors(u))
+    # Sans conflit
+    for a, b in AF.edges():
+        model.Add(x[a] + x[b] <= 1)
 
+    # Défense
+    for a in args:
+        for attacker in AF.predecessors(a):
 
-def _is_conflict_free(graph: nx.DiGraph, S: frozenset) -> bool:
-    """True iff no argument in S attacks another argument in S."""
-    attacked = _attacked_by_set(graph, S)
-    return S.isdisjoint(attacked)
+            defenders = list(AF.predecessors(attacker))
 
+            if not defenders:
+                model.Add(x[a] == 0)
+            else:
+                model.Add(sum(x[d] for d in defenders) >= x[a])
 
-def _defends(graph: nx.DiGraph, S: frozenset, node) -> bool:
-    """True iff S defends `node` (every attacker of `node` is attacked by S)."""
-    attacked_by_S = _attacked_by_set(graph, S)
-    return _attackers(graph, node).issubset(attacked_by_S)
-
-
-def _is_admissible(graph: nx.DiGraph, S: frozenset) -> bool:
-    """True iff S is conflict-free and defends all its members."""
-    if not _is_conflict_free(graph, S):
-        return False
-    return all(_defends(graph, S, a) for a in S)
+    return model, x, args
 
 
-# ---------------------------------------------------------------------------
-# Preferred extension via backtracking + admissibility pruning
-# ---------------------------------------------------------------------------
+def _solve(AF, required_in=frozenset()):
+    model, x, args = _build_model(AF, required_in)
 
-def preferred_extension(graph: nx.DiGraph, required: set = None) -> set:
+    solver = cp_model.CpSolver()
+
+    status = solver.Solve(model)
+
+    if status not in (cp_model.FEASIBLE, cp_model.OPTIMAL):
+        return None
+
+    return {a for a in args if solver.Value(x[a])}
+
+
+def preferred_extension(AF: nx.DiGraph, must_contain=None):
     """
-    Return one preferred extension of the argumentation framework `graph`.
+    Retourne une extension preferred.
 
-    A preferred extension is a maximal (w.r.t. set inclusion) admissible set.
-
-    Parameters
+    Paramètres
     ----------
-    graph : nx.DiGraph
-        A directed graph where nodes are arguments and an edge (a, b)
-        means argument `a` attacks argument `b`.
-    required : set, optional
-        A set of arguments that must be included in the returned
-        preferred extension. By Dung's fundamental lemma, every
-        admissible set extends to at least one preferred extension;
-        but a non-admissible `required` can still be contained in a
-        preferred extension; the search below freely adds whatever
-        further arguments are needed to defend it.
+    AF : nx.DiGraph
+        Graphe d'argumentation.
 
-        If `required` is not conflict-free, no preferred extension
-        can possibly contain it (conflict-freeness is monotone and
-        can never be repaired by adding more arguments), so this
-        function returns the empty set immediately in that case.
-        Otherwise the search proceeds and returns empty only if no
-        preferred extension containing `required` exists at all.
+    must_contain : hashable | None
+        Si spécifié, l'extension preferred retournée doit contenir
+        cet argument. Si aucune n'existe, retourne set().
 
-    Returns
+    Retour
     -------
     set
-        The nodes forming a preferred extension that contains `required`
-        (if `required` is given and admissible). Returns the empty set
-        if the only preferred extension is the empty set, or if
-        `required` is not admissible.
-
-    Algorithm
-    ---------
-    Backtracking search that, for every argument, branches on whether it
-    is IN or OUT of the candidate set. Two important correctness points:
-
-    1. While building a candidate incrementally, only *conflict-freeness*
-       is safe to prune on, because it is monotone: once two arguments in
-       the candidate attack each other, no further additions can undo
-       that. Full *admissibility* is NOT monotone under incremental
-       construction -- an argument added early may look "undefended" at
-       the time it is added, yet become properly defended once a later
-       argument (which attacks its attacker) is also added. Pruning on
-       full admissibility at every intermediate step discards branches
-       that would have led to valid, larger admissible sets. Admissibility
-       must only be checked once a candidate is complete (i.e., at a leaf
-       of the search tree).
-
-    2. Maximality must be decided by set inclusion, not by cardinality.
-       We keep every admissible leaf set that is not a strict subset of
-       another one found, and return one of those inclusion-maximal sets.
-
-    To support `required`, every argument in `required` is forced IN
-    from the start (instead of being a free choice during the search),
-    and `required` itself is checked for admissibility up front.
     """
-    args = list(graph.nodes())
-    n = len(args)
 
-    if n == 0:
+    required = set()
+
+    if must_contain is not None:
+
+        if must_contain not in AF:
+            return set()
+
+        required.add(must_contain)
+
+    current = _solve(AF, frozenset(required))
+
+    if current is None:
         return set()
 
-    required = frozenset(required) if required else frozenset()
+    while True:
 
-    # Only conflict-freeness can be safely checked up front. Full
-    # admissibility of `required` is NOT a valid pre-condition: a single
-    # argument (or any non-admissible-but-conflict-free set) can still
-    # belong to a preferred extension once the search adds the further
-    # arguments needed to defend it. Requiring full admissibility here
-    # incorrectly rejects valid inputs like required={'A'} above.
-    if required and not _is_conflict_free(graph, required):
-        return set()
+        model, x, args = _build_model(AF, current)
 
-    # Inclusion-maximal admissible sets found so far (an antichain).
-    maximal_candidates: list = []
+        outside = [a for a in args if a not in current]
 
-    def _record(IN: frozenset) -> None:
-        """Insert IN into maximal_candidates, keeping only maximal sets."""
-        for C in maximal_candidates:
-            if IN <= C:
-                return  # IN is dominated by an existing candidate; discard.
-        # Remove any existing candidates that IN strictly dominates.
-        maximal_candidates[:] = [C for C in maximal_candidates if not (C <= IN)]
-        maximal_candidates.append(IN)
+        if not outside:
+            return current
 
-    # `required` arguments are forced IN from the start; only the rest
-    # are free choices in the backtracking search.
-    initial_remaining = tuple(a for a in args if a not in required)
-    stack = [(required, initial_remaining)]
+        # sur-ensemble strict
+        model.Add(sum(x[a] for a in outside) >= 1)
 
-    while stack:
-        IN, remaining = stack.pop()
+        solver = cp_model.CpSolver()
 
-        # --- Pruning: only conflict-freeness is safe mid-construction. --- #
-        # (Full admissibility is checked only at leaves; see docstring.)
-        if not _is_conflict_free(graph, IN):
-            continue
+        status = solver.Solve(model)
 
-        # --- No more arguments to assign --------------------------------- #
-        if not remaining:
-            if _is_admissible(graph, IN):
-                _record(IN)
-            continue
+        if status not in (cp_model.FEASIBLE, cp_model.OPTIMAL):
+            return current
 
-        # Pick the next argument to label.
-        arg = remaining[0]
-        rest = remaining[1:]
-
-        # ---- Branch 1: label `arg` as OUT (skip it) -------------------- #
-        stack.append((IN, rest))
-
-        # ---- Branch 2: label `arg` as IN -------------------------------- #
-        # Only prune here on conflict-freeness (cheap, monotone, safe).
-        attacked_by_arg = frozenset(graph.successors(arg))
-        if IN.isdisjoint(attacked_by_arg) and arg not in _attacked_by_set(graph, IN):
-            stack.append((IN | {arg}, rest))
-
-    if not maximal_candidates:
-        return set()
-
-    return set(maximal_candidates[0])
+        current = {a for a in args if solver.Value(x[a])}
