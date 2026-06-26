@@ -311,7 +311,7 @@ async def query(req: QueryRequest):
         raise HTTPException(400, "KG non construit")
     llm = get_llm_client()
     history = [{"role": m.role, "content": m.content} for m in req.history]
-    r = pipeline_run(req.question, state["kg"], llm, state["docs_map"], req.max_hops, history)
+    r = pipeline_run(req.question, state["kg"], llm, state["docs_map"], req.max_hops, history=history)
     return QueryResponse(
         answer=r.answer,
         trace=[

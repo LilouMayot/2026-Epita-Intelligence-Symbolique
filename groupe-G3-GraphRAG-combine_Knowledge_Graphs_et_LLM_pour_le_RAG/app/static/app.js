@@ -256,6 +256,7 @@ function toggleDrawer(chipId, drawerId) {
   const isOpen = drawer.classList.contains('open');
   drawer.classList.toggle('open');
   chip.classList.toggle('open');
+  drawer.style.overflow = isOpen ? '' : 'auto';
   const base = chip.textContent.replace(/[↑↓]/g, '').trim();
   chip.textContent = base + (isOpen ? ' ↓' : ' ↑');
 }

@@ -59,7 +59,7 @@ Rules:
 
 Context:
 {context}
-
+{history_section}
 Question: {question}
 
 Answer:"""
@@ -114,7 +114,16 @@ def run(
     seeds = detect_entities(question, kg)
     subgraph = extract_subgraph(kg, seeds, max_hops=max_hops, max_nodes=max_nodes)
     context = subgraph_to_context(subgraph)
-    answer = llm.complete(_PROMPT.format(context=context, question=question), history=history)
+
+    history_section = ""
+    if history:
+        lines = []
+        for m in history:
+            role = "User" if m["role"] == "user" else "Assistant"
+            lines.append(f"{role}: {m['content']}")
+        history_section = "Prior conversation:\n" + "\n".join(lines)
+
+    answer = llm.complete(_PROMPT.format(context=context, question=question, history_section=history_section))
 
     docs_used: List[DocReference] = []
     if docs_map:

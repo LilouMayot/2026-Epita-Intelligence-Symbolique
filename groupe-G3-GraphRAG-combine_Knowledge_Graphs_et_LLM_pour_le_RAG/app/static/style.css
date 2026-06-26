@@ -107,7 +107,7 @@ body { font-family:'Inter',-apple-system,sans-serif; background:var(--bg-base); 
 .chip:hover { border-color:var(--accent); }
 .chip.open { background:var(--accent-dim); border-color:rgba(124,106,247,.4); }
 .drawer { margin-top:8px; background:var(--bg-input); border:1px solid var(--border); border-radius:6px; overflow:hidden; max-height:0; opacity:0; transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .25s; }
-.drawer.open { max-height:360px; opacity:1; }
+.drawer.open { max-height:360px; opacity:1; overflow:auto; scrollbar-width:thin; scrollbar-color:var(--border-active) transparent; }
 .drawer-inner { padding:12px 14px; }
 .drawer-label { font-size:9px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin-bottom:7px; font-family:'JetBrains Mono',monospace; }
 .step-row { display:flex; gap:9px; margin-bottom:6px; }
